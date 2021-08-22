@@ -1,0 +1,19 @@
+.basePadding {
+  padding: 0 10.938vw;
+}
+
+.morePadding {
+  padding-left: 7.813vw;
+}
+
+.headingGaramond {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.textManrope {
+  font-family: 'Manrope', sans-serif;
+}
+
+p {
+  margin: 0;
+}
