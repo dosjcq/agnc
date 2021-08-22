@@ -4,23 +4,26 @@
     <section class="basePadding">
       <div class="morePadding">
         <div class="mainItem">
-          <div class="mainHeading headingGaramond">AGNC —</div>
+          <div class="mainHeading d">AGNC —</div>
           <p class="textManrope mainBlockText first">
-            Помогаем нашим клиентам обрести лояльную аудиторию и широкую узнаваемость, популяризировать их экологические и благотворительные инициативы.
+            Помогаем нашим клиентам обрести лояльную аудиторию и широкую
+            узнаваемость, популяризировать их экологические и благотворительные
+            инициативы.
           </p>
         </div>
         <div class="mainItem">
-          <div class="mainHeading headingGaramond">это</div>
-          <div class="mainHeading headingGaramond">креативное</div>
+          <div class="mainHeading ">это</div>
+          <div class="mainHeading ">креативное</div>
         </div>
         <div class="mainItem">
-          <div class="mainHeading headingGaramond">коммуникационное</div>
+          <div class="mainHeading ">коммуникационное</div>
         </div>
         <div class="mainItem">
           <p class="textManrope mainBlockText second">
-            Мы оказываем услуги по разработке креативных концепций для развития прогрессивных брендов 
+            Мы оказываем услуги по разработке креативных концепций для развития
+            прогрессивных брендов
           </p>
-          <div class="mainHeading headingGaramond">агенство</div>
+          <div class="mainHeading ">агенство</div>
         </div>
       </div>
     </section>
@@ -28,20 +31,20 @@
 </template>
 
 <script>
-import TheHeader from '~/components/Navigation/TheHeader'
+import TheHeader from "~/components/Navigation/TheHeader";
 
 export default {
-  name: 'MainBlock',
+  name: "MainBlock",
   components: {
     TheHeader
   }
-}
+};
 </script>
 
 <style scoped>
 .mainBlock {
   background: rgba(147, 137, 210, 0.5);
-  backdrop-filter: blur(248.4px); 
+  backdrop-filter: blur(248.4px);
   height: 100vh;
 }
 
@@ -59,6 +62,7 @@ section {
 }
 
 .mainHeading {
+  font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-size: 8.438vw;
   line-height: 1;
