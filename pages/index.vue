@@ -8,6 +8,8 @@
     <OurValuesBlock />
     <MassMediaBlock />
     <ClientsBlock />
+    <ContactsBlock />
+    <Footer />
   </div>
 </template>
 
@@ -20,6 +22,8 @@ import SmmBlock from "~/components/Blocks/SmmBlock/SmmBlock";
 import OurValuesBlock from "~/components/Blocks/OurValuesBlock/OurValuesBlock";
 import MassMediaBlock from "~/components/Blocks/MassMediaBlock/MassMedia";
 import ClientsBlock from "~/components/Blocks/ClientsBlock/ClientsBlock";
+import ContactsBlock from "~/components/Blocks/ContactsBlock/ContactsBlock";
+import Footer from "~/components/Footer/Footer";
 
 export default {
   components: {
@@ -30,7 +34,9 @@ export default {
     SmmBlock,
     OurValuesBlock,
     MassMediaBlock,
-    ClientsBlock
+    ClientsBlock,
+    ContactsBlock,
+    Footer
   }
 };
 </script>

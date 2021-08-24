@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo">
-      <img src="~/assets/images/AGNC.svg" alt="AGNC">
+      <img src="~/assets/images/AGNC.svg" alt="AGNC" />
     </div>
     <div class="navigation">
       <ul class="textManrope">
@@ -10,20 +10,20 @@
         <li>Инфлюенсеры</li>
         <li>Партнеры</li>
       </ul>
-      <BaseButton />
+      <base-button>Оставить заявку</base-button>
     </div>
   </header>
 </template>
 
 <script>
-import BaseButton from '~/components/BaseComponents/BaseButton'
+import BaseButton from "~/components/BaseComponents/BaseButton";
 
 export default {
-  name: 'TheHeader',
+  name: "TheHeader",
   components: {
     BaseButton
   }
-}
+};
 </script>
 
 <style lang="css" scoped>
@@ -41,7 +41,6 @@ header {
 
 ul {
   display: flex;
-  
 }
 
 li {
@@ -51,6 +50,4 @@ li {
   line-height: 27px;
   font-size: 1.125vw;
 }
-
-
 </style>

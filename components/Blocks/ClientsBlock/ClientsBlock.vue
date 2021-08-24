@@ -15,49 +15,71 @@
               <img
                 src="~/assets/images/Logo/Клиенты/Exalter-1 1.png"
                 alt="EXALTER"
+                width="100%"
               />
             </div>
             <div class="clientsLogos">
               <img
                 src="~/assets/images/Logo/Клиенты/perface.png"
                 alt="perface"
+                width="100%"
               />
             </div>
             <div class="clientsLogos">
               <img
                 src="~/assets/images/Logo/Клиенты/sibolle.png"
                 alt="sibolle"
+                width="100%"
               />
             </div>
             <div class="clientsLogos">
               <img
                 src="~/assets/images/Logo/Клиенты/MAISON_SYBARITE.png"
                 alt="MAISON SYBARITE"
+                width="100%"
               />
             </div>
             <div class="clientsLogos">
               <img
                 src="~/assets/images/Logo/Клиенты/DN.png"
                 alt="Дари Надежду"
+                width="100%"
               />
             </div>
             <div class="clientsLogos">
               <img
                 src="~/assets/images/Logo/Клиенты/RosesLace.png"
                 alt="Roces Lace"
+                width="100%"
               />
             </div>
             <div class="clientsLogos">
               <img
                 src="~/assets/images/Logo/Клиенты/apeiron.png"
                 alt="apeiron"
+                width="100%"
               />
             </div>
             <div class="clientsLogos">
-              <img src="~/assets/images/Logo/Клиенты/almond.png" alt="almond" />
+              <img
+                src="~/assets/images/Logo/Клиенты/almond.png"
+                alt="almond"
+                width="100%"
+              />
             </div>
             <div class="clientsLogos">
-              <img src="~/assets/images/Logo/Клиенты/sculpt.png" alt="sculpt" />
+              <img
+                src="~/assets/images/Logo/Клиенты/sculpt.png"
+                alt="sculpt"
+                width="100%"
+              />
+            </div>
+            <div class="clientsLogos">
+              <img
+                src="~/assets/images/Logo/Клиенты/maniovich.png"
+                alt="maniovich"
+                width="100%"
+              />
             </div>
           </div>
         </div>
@@ -90,5 +112,13 @@ p.text {
   grid-column-gap: 60px;
   grid-row-gap: 65px;
   align-items: center;
+}
+
+.clientsLogos {
+  margin: 0 auto;
+}
+
+.clientsLogos:last-child {
+  grid-column: 2 / 3;
 }
 </style>
