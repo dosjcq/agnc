@@ -43,13 +43,15 @@ export default {
 
 <style scoped>
 .mainBlock {
-  background: rgba(147, 137, 210, 0.5);
-  backdrop-filter: blur(248.4px);
+  background-image: url("~/assets/images/BG.png");
+
   height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
 
 section {
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
 .mainItem {
@@ -89,12 +91,12 @@ section {
 }
 
 @media (max-width: 1024px) {
-  section {
-    margin-top: 45px;
-  }
-
   .mainItem:nth-child(2) .mainHeading:first-child {
     margin-right: 17px;
+  }
+
+  section {
+    margin-top: 55px;
   }
 
   .mainHeading {

@@ -13,45 +13,140 @@
         </div>
       </div>
     </div>
-    <swiper
-      :slides-per-view="3"
-      :space-between="50"
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
-    >
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
+    <swiper class="swiper" :options="swiperOption">
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/anka.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Анка Ахалая</p>
+          <p class="infCareer">Модель</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/darina.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Дарина Фаизова</p>
+          <p class="infCareer">Модель</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/sari.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Сарина Турецкая</p>
+          <p class="infCareer">Модель</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/tamara.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Тамара mp3</p>
+          <p class="infCareer">Певица</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/anka.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Анка Ахалая</p>
+          <p class="infCareer">Модель</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/darina.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Дарина Фаизова</p>
+          <p class="infCareer">Модель</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/sari.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Сарина Турецкая</p>
+          <p class="infCareer">Модель</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/tamara.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Тамара mp3</p>
+          <p class="infCareer">Певица</p>
+        </div>
+      </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
 
 <script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 
-// Import Swiper styles
-// import "swiper/css";
-import "swiper/swiper-bundle.min.css";
-
-// swiper core styles
-import "swiper/swiper.min.css";
+// import style (>= Swiper 6.x)
+import "swiper/swiper-bundle.css";
 
 export default {
   components: {
     Swiper,
     SwiperSlide
   },
-  setup() {
-    const onSwiper = swiper => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
+  directives: {
+    swiper: directive
+  },
+  data() {
     return {
-      onSwiper,
-      onSlideChange
+      swiperOption: {
+        slidesPerView: 4.5,
+        // centeredSlides: true,
+        spaceBetween: 50,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 4.5
+          },
+          640: {
+            slidesPerView: 3.5
+          },
+          480: {
+            slidesPerView: 2.5
+          },
+          0: {
+            slidesPerView: 1.5
+          }
+        }
+      }
     };
   }
 };
@@ -102,7 +197,7 @@ p {
   width: 50%;
 }
 
-/* .swiper-slide {
+.swiper-slide {
   width: 60%;
 }
 .swiper-slide:nth-child(2n) {
@@ -110,10 +205,10 @@ p {
 }
 .swiper-slide:nth-child(3n) {
   width: 20%;
-} */
+}
 
-/* .swiper {
+.swiper {
   margin-top: 60px;
   padding-left: 10.938vw;
-} */
+}
 </style>
