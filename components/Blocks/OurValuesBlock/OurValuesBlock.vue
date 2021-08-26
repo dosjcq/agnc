@@ -33,7 +33,11 @@
           <div class="ourValuePoint">
             <div class="numberWithPoint">
               <p class="numberPoint">03</p>
-              <h5>Клиентоориентированность</h5>
+              <h5 class="clientFull">Клиентоориентированность</h5>
+              <h5 class="clientHalf">
+                <span>Клиентоориенти-</span>
+                <span>рованость</span>
+              </h5>
             </div>
             <div class="leftText">
               <p class="text marginFromCenter">
@@ -103,6 +107,10 @@ h5 {
   margin-left: 7.5vw;
 }
 
+.clientHalf {
+  display: none;
+}
+
 h2 {
   margin-bottom: 30px;
 }
@@ -112,10 +120,24 @@ h2 {
 }
 
 .ourValuePoint:not(:last-child) {
-  margin-bottom: 61px;
+  margin-bottom: 60px;
 }
 
-.ourValuePoint:nth-child(2) {
-  margin-bottom: 50px;
+@media (max-width: 1024px) {
+  .ourValuePoint {
+    align-items: center;
+  }
+
+  .numberWithPoint {
+    align-items: center;
+  }
+
+  .clientFull {
+    display: none;
+  }
+
+  .clientHalf {
+    display: block;
+  }
 }
 </style>

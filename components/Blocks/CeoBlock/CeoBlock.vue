@@ -72,4 +72,28 @@ img {
 .ceoHistory:last-child {
   margin-top: 20px;
 }
+
+@media (max-width: 1024px) {
+  .ceoImg {
+    margin-right: 40px;
+  }
+
+  .ceoInfo {
+    display: grid;
+    grid-row-gap: 115px;
+  }
+
+  img {
+    max-height: 800px;
+    object-fit: contain;
+  }
+
+  .companyHistory {
+    align-self: end;
+  }
+
+  .ceoHistory:last-child {
+    display: none;
+  }
+}
 </style>

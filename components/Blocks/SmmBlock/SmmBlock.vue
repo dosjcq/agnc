@@ -14,13 +14,13 @@
           </div>
           <div class="smmSteps">
             <ul>
-              <li>Анализ целевой аудитории</li>
-              <li>Анализ ваших конкурентов</li>
-              <li>Разработка SMM-стратегии</li>
-              <li>Разработка Tone of Voice</li>
-              <li>Разработка контент-стратегии</li>
-              <li>Определение ключевых маркетинговых сообщений</li>
-              <li>Разработка и реализация рекламных кампаний</li>
+              <li><span>Анализ целевой аудитории</span></li>
+              <li><span>Анализ ваших конкурентов</span></li>
+              <li><span>Разработка SMM-стратегии</span></li>
+              <li><span>Разработка Tone of Voice</span></li>
+              <li><span>Разработка контент-стратегии</span></li>
+              <li><span>Определение ключевых маркетинговых сообщений</span></li>
+              <li><span>Разработка и реализация рекламных кампаний</span></li>
             </ul>
           </div>
         </div>
@@ -55,6 +55,11 @@ ul {
 }
 
 li {
+  list-style-type: disc;
+  color: #9389d2;
+}
+
+span {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
@@ -67,5 +72,30 @@ li:not(:first-child) {
 
 .text {
   max-width: 26.063vw;
+}
+
+@media (max-width: 1024px) {
+  .smmContent {
+    grid-column-gap: 9.766vw;
+  }
+
+  .smmSteps {
+    display: inline-block;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #333333;
+  }
+
+  li:not(:first-child) {
+    margin-top: 23px;
+  }
+
+  .text {
+    max-width: 39.063vw;
+  }
 }
 </style>
