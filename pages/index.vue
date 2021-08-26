@@ -6,6 +6,7 @@
     <ServicesBlock />
     <SmmBlock />
     <OurValuesBlock />
+    <SwiperBlock />
     <MassMediaBlock />
     <ClientsBlock />
     <ContactsBlock />
@@ -20,6 +21,7 @@ import CeoBlock from "~/components/Blocks/CeoBlock/CeoBlock";
 import ServicesBlock from "~/components/Blocks/ServicesBlock/ServicesBlock";
 import SmmBlock from "~/components/Blocks/SmmBlock/SmmBlock";
 import OurValuesBlock from "~/components/Blocks/OurValuesBlock/OurValuesBlock";
+import SwiperBlock from "~/components/Blocks/SwiperBlock/SwiperBlock";
 import MassMediaBlock from "~/components/Blocks/MassMediaBlock/MassMedia";
 import ClientsBlock from "~/components/Blocks/ClientsBlock/ClientsBlock";
 import ContactsBlock from "~/components/Blocks/ContactsBlock/ContactsBlock";
@@ -33,6 +35,7 @@ export default {
     ServicesBlock,
     SmmBlock,
     OurValuesBlock,
+    SwiperBlock,
     MassMediaBlock,
     ClientsBlock,
     ContactsBlock,

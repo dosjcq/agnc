@@ -19,13 +19,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -36,13 +35,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -53,13 +51,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -70,13 +67,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -87,13 +83,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -104,13 +99,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -121,13 +115,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -138,13 +131,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -155,13 +147,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
 
@@ -172,13 +163,12 @@
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
-                    <span
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    <div class="contentAccord">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat.</span
-                    >
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                   </template>
                 </accordion-item>
               </accordion>
@@ -233,6 +223,10 @@ h1 {
 p {
   cursor: pointer;
   color: #141414;
+}
+
+.contentAccord {
+  margin-top: 20px;
 }
 
 .accordion-heading {

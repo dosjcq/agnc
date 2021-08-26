@@ -5,7 +5,7 @@
       <div class="morePadding">
         <div class="mainItem">
           <div class="mainHeading d">AGNC —</div>
-          <p class="textManrope mainBlockText first">
+          <p class=" mainBlockText first">
             Помогаем нашим клиентам обрести лояльную аудиторию и широкую
             узнаваемость, популяризировать их экологические и благотворительные
             инициативы.
@@ -19,7 +19,7 @@
           <div class="mainHeading ">коммуникационное</div>
         </div>
         <div class="mainItem">
-          <p class="textManrope mainBlockText second">
+          <p class=" mainBlockText second">
             Мы оказываем услуги по разработке креативных концепций для развития
             прогрессивных брендов
           </p>
@@ -86,5 +86,27 @@ section {
 .second {
   width: 12.438vw;
   margin-right: 29px;
+}
+
+@media (max-width: 1024px) {
+  section {
+    margin-top: 45px;
+  }
+
+  .mainItem:nth-child(2) .mainHeading:first-child {
+    margin-right: 17px;
+  }
+
+  .mainHeading {
+    font-size: 9.375vw;
+  }
+
+  .mainBlockText {
+    display: none;
+  }
+
+  .mainItem:nth-child(4) {
+    justify-content: center;
+  }
 }
 </style>

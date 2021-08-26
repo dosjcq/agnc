@@ -17,7 +17,6 @@
       >
         <path
           d="M0 10.5H30.5M30.5 10.5C22.5128 10.5221 20.3511 8.5133 21 1M30.5 10.5C22.5272 10.5079 20.1642 12.3511 21 20"
-          stroke="#414141"
           stroke-width="1.5"
         />
       </svg>
@@ -99,8 +98,15 @@ export default {
   overflow: hidden;
 }
 
+svg {
+  transition: 0.3s ease-out;
+  stroke: #414141;
+}
+
 .rotateArrow {
   transform: rotate(90deg);
+  transition: 0.3s ease-out;
+  stroke: #9389d2;
 }
 
 .accordion-enter,

@@ -113,6 +113,12 @@ input:focus {
   border-color: black;
 }
 
+input:focus-visible {
+  border-left: none;
+  border-right: none;
+  border-color: black;
+}
+
 .userContactsForm input:nth-child(2) {
   border-bottom: none;
 }

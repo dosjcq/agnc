@@ -37,6 +37,7 @@ header {
 
 .navigation {
   display: flex;
+  align-items: center;
 }
 
 ul {
@@ -49,5 +50,23 @@ li {
   font-weight: 400;
   line-height: 27px;
   font-size: 1.125vw;
+}
+
+@media (max-width: 1024px) {
+  header {
+    margin: 0 2.93vw;
+  }
+
+  li {
+    list-style: none;
+    margin-right: 30px;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 1.125vw;
+  }
+
+  li:nth-child(3) {
+    display: none;
+  }
 }
 </style>
