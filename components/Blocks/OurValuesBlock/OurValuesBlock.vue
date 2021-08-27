@@ -102,8 +102,6 @@ p.numberPoint {
 }
 
 h5 {
-  font-size: 36px;
-  line-height: 44.28px;
   margin-left: 7.5vw;
 }
 
@@ -138,6 +136,35 @@ h2 {
 
   .clientHalf {
     display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .ourValuePoints {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+
+  .ourValuePoint {
+    display: block;
+  }
+
+  h5 {
+    margin-left: 8px;
+  }
+
+  p.numberPoint {
+    font-size: 5.625vw;
+  }
+
+  .numberWithPoint {
+    width: 100%;
+  }
+
+  .leftText {
+    width: 100%;
+    margin-top: 4px;
   }
 }
 </style>

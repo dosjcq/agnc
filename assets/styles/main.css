@@ -92,6 +92,17 @@ p.text {
 }
 
 @media (max-width: 640px) {
+  h1 {
+    font-weight: 500;
+    font-size: 5.625vw; /* 36 px */
+    line-height: 6.919vw; /* 44.28 px */
+  }
+
+  h3 {
+    font-size: 4.375vw; /* 28 px */
+    line-height: 5.381vw; /* 34.44 px */
+  }
+
   h5 {
     font-size: 4.375vw; /* 28px */
     line-height: 5.381vw; /* 34.44px */

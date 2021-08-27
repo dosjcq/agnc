@@ -36,4 +36,10 @@ li {
   box-sizing: border-box;
   width: 39.063vw;
 }
+
+@media (max-width: 640px) {
+  li {
+    width: auto;
+  }
+}
 </style>

@@ -235,6 +235,21 @@ p {
   line-height: 33px;
 }
 
-.accordion {
+@media (max-width: 640px) {
+  .servicesContent {
+    display: block;
+
+    padding: 70px 0 120px 0;
+  }
+
+  .accordion {
+    margin-top: 30px;
+  }
+
+  .accordion-heading {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 27.32px;
+  }
 }
 </style>

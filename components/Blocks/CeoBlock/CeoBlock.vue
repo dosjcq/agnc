@@ -31,6 +31,12 @@
               брендам полный спектр услуг для их развития и продвижения как на
               Российском, так и международном рынке
             </p>
+            <p class="smallCeoHistory text">
+              Имея 7-летний опыт работы в медиаиндустрии, Ольга с головой
+              окунулась в журналистику, рекламу и маркетинг. Она вышла за рамки
+              мира моды, заняв рабочее место в топовых модных медиа-
+              конгломератах мира, базирующихся в России
+            </p>
           </div>
         </div>
       </div>
@@ -73,6 +79,10 @@ img {
   margin-top: 20px;
 }
 
+.smallCeoHistory {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .ceoImg {
     margin-right: 40px;
@@ -94,6 +104,21 @@ img {
 
   .ceoHistory:last-child {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ceoPosition {
+    line-height: 20.49px;
+    font-size: 2.344vw;
+  }
+
+  .ceoHistory {
+    display: none;
+  }
+
+  .smallCeoHistory {
+    display: block;
   }
 }
 </style>
