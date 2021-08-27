@@ -90,3 +90,27 @@ p.text {
     line-height: 27px;
   }
 }
+
+@media (max-width: 640px) {
+  h5 {
+    font-size: 4.375vw; /* 28px */
+    line-height: 5.381vw; /* 34.44px */
+  }
+
+  .basePadding {
+    padding: 0 15px; /* 30px */
+  }
+
+  .morePadding {
+    padding-left: 0; /* 70px */
+  }
+
+  .marginFromCenter {
+    margin-left: 0;
+  }
+
+  p.text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

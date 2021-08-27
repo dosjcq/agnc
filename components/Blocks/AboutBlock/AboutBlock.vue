@@ -47,4 +47,20 @@
 .moreAboutContentText {
   width: 50%;
 }
+
+@media (max-width: 640px) {
+  .introduceContent {
+    width: 60.813vw;
+  }
+
+  .moreAboutContent {
+    display: flex;
+    align-items: start;
+    margin-top: 30px;
+  }
+
+  .moreAboutContentText {
+    width: 50%;
+  }
+}
 </style>

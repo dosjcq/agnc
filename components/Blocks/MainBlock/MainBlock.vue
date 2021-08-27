@@ -92,11 +92,11 @@ section {
 
 @media (max-width: 1024px) {
   .mainItem:nth-child(2) .mainHeading:first-child {
-    margin-right: 17px;
+    margin-right: 15px;
   }
 
   section {
-    margin-top: 55px;
+    margin-top: 144px;
   }
 
   .mainHeading {
@@ -109,6 +109,20 @@ section {
 
   .mainItem:nth-child(4) {
     justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainItem:nth-child(2) .mainHeading:first-child {
+    margin-right: 17px;
+  }
+
+  section {
+    margin-top: 144px;
+  }
+
+  .mainHeading {
+    font-size: 11.875vw;
   }
 }
 </style>

@@ -13,7 +13,7 @@
           <div class="massMediaAgencies">
             <div class="massMediaLogos">
               <svg
-                width="167"
+                width="100%"
                 height="44"
                 viewBox="0 0 167 44"
                 fill="none"
@@ -27,7 +27,7 @@
             </div>
             <div class="massMediaLogos">
               <svg
-                width="166"
+                width="100%"
                 height="42"
                 viewBox="0 0 166 42"
                 fill="none"
@@ -53,7 +53,7 @@
             </div>
             <div class="massMediaLogos">
               <svg
-                width="168"
+                width="100%"
                 height="39"
                 viewBox="0 0 168 39"
                 fill="none"
@@ -71,11 +71,12 @@
               <img
                 src="~/assets/images/Logo/СМИ/Cosmopolitan.svg"
                 alt="Cosmopolitan"
+                width="100%"
               />
             </div>
             <div class="massMediaLogos">
               <svg
-                width="166"
+                width="100%"
                 height="39"
                 viewBox="0 0 166 39"
                 fill="none"
@@ -96,7 +97,7 @@
             </div>
             <div class="massMediaLogos">
               <svg
-                width="168"
+                width="100%"
                 height="46"
                 viewBox="0 0 168 46"
                 fill="none"
@@ -110,7 +111,7 @@
             </div>
             <div class="massMediaLogos">
               <svg
-                width="173"
+                width="100%"
                 height="57"
                 viewBox="0 0 173 57"
                 fill="none"
@@ -146,11 +147,12 @@
               <img
                 src="~/assets/images/Logo/СМИ/Fashion Magazine.svg"
                 alt="Elle"
+                width="100%"
               />
             </div>
             <div class="massMediaLogos">
               <svg
-                width="168"
+                width="100%"
                 height="38"
                 viewBox="0 0 168 38"
                 fill="none"
@@ -198,5 +200,18 @@ p.text {
   grid-row-gap: 65px;
   align-items: center;
   justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  p.text {
+    max-width: 32.813vw
+  }
+
+  .massMediaAgencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 50px;
+  }
 }
 </style>

@@ -121,4 +121,17 @@ p.text {
 .clientsLogos:last-child {
   grid-column: 2 / 3;
 }
+
+@media (max-width: 1024px) {
+  p.text {
+    max-width: 31.25vw;
+  }
+
+  .clientsAgencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 50px;
+  }
+}
 </style>
