@@ -204,7 +204,7 @@ p.text {
 
 @media (max-width: 1024px) {
   p.text {
-    max-width: 32.813vw
+    max-width: 32.813vw;
   }
 
   .massMediaAgencies {
@@ -212,6 +212,23 @@ p.text {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 32px;
     grid-row-gap: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  p.text {
+    max-width: 38.281vw;
+  }
+
+  .massMediaAgencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 34px;
+    grid-row-gap: 60px;
+  }
+
+  .massMediaContent {
+    justify-content: space-between;
   }
 }
 </style>

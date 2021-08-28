@@ -2,7 +2,7 @@
   <div class="aboutBlock">
     <div class="basePadding">
       <div class="morePadding">
-        <div class="wideDisplayContent">
+        <div class="displayContent">
           <div class="introduceContent ">
             <h5>
               Предоставляем полный спектр маркетинговых и креативных услуг
@@ -23,26 +23,6 @@
               медиа-ресурс, способного не только оказывать полноценный спектр
               услуг своим клиентам, но и создавать собственные уникальные
               проекты и продукты. Здесь мы видим свой потенциал бесконечным.
-            </p>
-          </div>
-        </div>
-        <div class="smallDisplayContent">
-          <div>
-            <h5>
-              Мы оказываем услуги по разработке креативных концепций для
-              развития прогрессивных брендов.
-            </h5>
-          </div>
-          <div class="moreAboutContent">
-            <p class="text moreAboutContentText">
-              Мы помогаем нашим клиентам не только обретать лояльную аудиторию и
-              широкую узнаваемость, но и популяризировать их экологичные и
-              благотворительные инициативы.
-            </p>
-            <p class="text moreAboutContentText ">
-              Также AGNC планирует развивать диджитальную pop-up галерею для
-              артистов разных жанров, в которой художники, музыканты,
-              иллюстраторы и фотографы смогут ярко заявить о себе.
             </p>
           </div>
         </div>
@@ -70,19 +50,7 @@
   width: 50%;
 }
 
-.smallDisplayContent {
-  display: none;
-}
-
 @media (max-width: 640px) {
-  .wideDisplayContent {
-    display: none;
-  }
-
-  .smallDisplayContent {
-    display: block;
-  }
-
   .moreAboutContent {
     display: block;
   }
@@ -90,6 +58,24 @@
   .moreAboutContentText {
     max-width: 68.438vw;
     width: auto;
+  }
+
+  .moreAboutContentText:last-child {
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .introduceContent {
+    width: 100%;
+  }
+
+  .moreAboutContent {
+    margin-top: 20px;
+  }
+
+  .moreAboutContentText {
+    max-width: 100%;
   }
 
   .moreAboutContentText:last-child {

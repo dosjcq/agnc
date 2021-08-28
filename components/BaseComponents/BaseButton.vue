@@ -17,4 +17,14 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
+@media (max-width: 640px) {
+  .button {
+    border-radius: 110px/45px;
+    padding: 4px 21px;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 16px;
+  }
+}
 </style>

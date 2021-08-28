@@ -167,4 +167,38 @@ h2 {
     margin-top: 4px;
   }
 }
+
+@media (max-width: 480px) {
+  h5 {
+    font-size: 24px;
+    line-height: 29.52px;
+    font-weight: 500;
+  }
+
+  p.numberPoint {
+    font-size: 36px;
+    line-height: 44.28px;
+  }
+
+  .ourValuePoints {
+    display: block;
+  }
+
+  .ourValuePoint {
+    display: block;
+  }
+
+  h5 {
+    margin-left: 8px;
+  }
+
+  .numberWithPoint {
+    width: 100%;
+  }
+
+  .leftText {
+    width: 100%;
+    margin-top: 4px;
+  }
+}
 </style>

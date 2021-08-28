@@ -118,11 +118,23 @@ section {
   }
 
   section {
-    margin-top: 144px;
+    margin-top: 0;
   }
 
   .mainHeading {
     font-size: 11.875vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainBlock {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    margin: auto 0;
+    padding-bottom: 40px;
   }
 }
 </style>

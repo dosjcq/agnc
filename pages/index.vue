@@ -7,7 +7,7 @@
     <SmmBlock />
     <OurValuesBlock />
     <SwiperBlock />
-    <Hui />
+
     <MassMediaBlock />
     <ClientsBlock />
     <ContactsBlock />
@@ -27,7 +27,6 @@ import MassMediaBlock from "~/components/Blocks/MassMediaBlock/MassMedia";
 import ClientsBlock from "~/components/Blocks/ClientsBlock/ClientsBlock";
 import ContactsBlock from "~/components/Blocks/ContactsBlock/ContactsBlock";
 import Footer from "~/components/Footer/Footer";
-import Hui from "~/components/Blocks/SwiperBlock/hui";
 
 // import "swiper/css";
 
@@ -40,7 +39,7 @@ export default {
     SmmBlock,
     OurValuesBlock,
     SwiperBlock,
-    Hui,
+
     MassMediaBlock,
     ClientsBlock,
     ContactsBlock,

@@ -98,6 +98,11 @@ p.text {
     line-height: 6.919vw; /* 44.28 px */
   }
 
+  h2 {
+    font-size: 5.625vw; /* 36 px */
+    line-height: 6.813vw; /* 43.6 px */
+  }
+
   h3 {
     font-size: 4.375vw; /* 28 px */
     line-height: 5.381vw; /* 34.44 px */
@@ -109,11 +114,52 @@ p.text {
   }
 
   .basePadding {
-    padding: 0 15px; /* 30px */
+    padding: 0 15px;
   }
 
   .morePadding {
-    padding-left: 0; /* 70px */
+    padding-left: 0;
+  }
+
+  .marginFromCenter {
+    margin-left: 0;
+  }
+
+  p.text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-weight: 500;
+    font-size: 32px; /* 36 px */
+    line-height: 39.36px; /* 44.28 px */
+  }
+
+  h2 {
+    font-size: 32px; /* 36 px */
+    line-height: 38.75px; /* 43.6 px */
+  }
+
+  h3 {
+    font-size: 28px; /* 28 px */
+    line-height: 34.44px; /* 34.44 px */
+  }
+
+  h5 {
+    font-size: 20px; /* 20px */
+    line-height: 24.6px; /* 24.6px */
+    font-weight: 600;
+  }
+
+  .basePadding {
+    padding: 0 15px;
+  }
+
+  .morePadding {
+    padding-left: 0;
   }
 
   .marginFromCenter {

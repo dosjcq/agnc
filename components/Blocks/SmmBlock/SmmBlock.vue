@@ -98,4 +98,35 @@ li:not(:first-child) {
     max-width: 39.063vw;
   }
 }
+
+@media (max-width: 480px) {
+  .smmContent {
+    display: block;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .text {
+    width: 100%;
+    max-width: none;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+  }
+
+  ul {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+
+  li:not(:first-child) {
+    margin-top: 25px;
+  }
+}
 </style>

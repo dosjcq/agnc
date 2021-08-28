@@ -7,7 +7,7 @@
         </div>
         <div class="ceoInfo">
           <div class="ceoName">
-            <h3>Ольга Свичинская</h3>
+            <h3>ОЛЬГА СВИЧИНСКАЯ</h3>
             <p class="ceoPosition ">Основатель и CEO AGNC</p>
           </div>
           <div class="companyHistory">
@@ -119,6 +119,31 @@ img {
 
   .smallCeoHistory {
     display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutCeo {
+    display: block;
+  }
+
+  .ceoImg {
+    margin-right: 0;
+  }
+
+  .ceoPosition {
+    line-height: 20.49px;
+    font-size: 15px;
+  }
+
+  .ceoInfo {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .companyHistory {
+    align-self: none;
+    margin-top: 20px;
   }
 }
 </style>

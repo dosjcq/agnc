@@ -6,7 +6,7 @@
           <h2>ИНФЛЮЕНСЕРЫ</h2>
         </div>
         <div class="morePadding">
-          <p>
+          <p class="text">
             Сообщество, которое окружает агентство является самым перспективным,
             молодым и желанным для брендов, которые идут в ногу со временем
           </p>
@@ -210,5 +210,34 @@ p {
 .swiper {
   margin-top: 60px;
   padding-left: 10.938vw;
+}
+
+@media (max-width: 640px) {
+  .swiperBlock {
+    margin-top: 250px;
+    background: #9389d2;
+    padding: 60px 0;
+  }
+
+  .swiperContent {
+    display: block;
+  }
+
+  p {
+    max-width: 45.313vw;
+  }
+
+  .morePadding {
+    margin-top: 15px;
+  }
+
+  .swiperHeading {
+    width: 100%;
+  }
+
+  .swiper {
+    margin-top: 40px;
+    padding-left: 15px;
+  }
 }
 </style>

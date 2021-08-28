@@ -10,7 +10,8 @@
         <li>Инфлюенсеры</li>
         <li>Партнеры</li>
       </ul>
-      <base-button>Оставить заявку</base-button>
+      <base-button class="wideDispaly">Оставить заявку</base-button>
+      <base-button class="smallDisplay">Меню</base-button>
     </div>
   </header>
 </template>
@@ -52,6 +53,10 @@ li {
   font-size: 1.125vw;
 }
 
+.smallDisplay {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   header {
     margin: 0 2.93vw;
@@ -67,6 +72,20 @@ li {
 
   li:nth-child(3) {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    display: none;
+  }
+
+  .wideDispaly {
+    display: none;
+  }
+
+  .smallDisplay {
+    display: block;
   }
 }
 </style>
