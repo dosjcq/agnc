@@ -4,7 +4,7 @@
       <div class="morePadding">
         <div class="clientsContent">
           <div class="clientsHeading">
-            <h2>Клиенты</h2>
+            <h2>КЛИЕНТЫ</h2>
             <p class="text">
               Также AGNC планирует развивать диджитальную pop-up галерею для
               артистов разных жанров
@@ -132,6 +132,34 @@ p.text {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 32px;
     grid-row-gap: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clientsContent {
+    display: block;
+  }
+
+  .clientsHeading {
+    width: 100%;
+  }
+
+  .clientsAgencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 34px;
+    grid-row-gap: 60px;
+    margin-top: 57px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 43.6px;
+  }
+
+  p.text {
+    max-width: none;
+    margin-top: 5px;
   }
 }
 </style>

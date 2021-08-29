@@ -240,4 +240,38 @@ p {
     padding-left: 15px;
   }
 }
+
+@media (max-width: 480px) {
+  .swiperBlock {
+    margin-top: 250px;
+    background: #9389d2;
+    padding: 60px 0;
+  }
+
+  .swiperContent {
+    display: block;
+  }
+
+  p {
+    max-width: none;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 43.6px;
+  }
+
+  .morePadding {
+    margin-top: 15px;
+  }
+
+  .swiperHeading {
+    width: 100%;
+  }
+
+  .swiper {
+    margin-top: 40px;
+    padding-left: 15px;
+  }
+}
 </style>

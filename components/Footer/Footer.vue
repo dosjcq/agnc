@@ -24,7 +24,8 @@
   display: flex;
   align-items: center;
   border-top: 1px solid #c4c4c4;
-  height: 150px;
+  padding: 40px 0 50px 0;
+  /* height: 150px; */
 }
 
 .infoContent:first-child {
@@ -37,5 +38,21 @@
 
 .infoContent p:last-child {
   color: #6c6c6c;
+}
+
+@media (max-width: 480px) {
+  .footerContainer {
+    display: block;
+    padding: 30px 0 20px 0;
+  }
+
+  .infoContent:first-child {
+    width: 100%;
+  }
+
+  .infoContent:last-child {
+    margin-top: 30px;
+    width: 100%;
+  }
 }
 </style>

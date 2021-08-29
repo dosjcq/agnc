@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import "reseter.css";
 import MainBlock from "~/components/Blocks/MainBlock/MainBlock";
 import AboutBlock from "~/components/Blocks/AboutBlock/AboutBlock";
 import CeoBlock from "~/components/Blocks/CeoBlock/CeoBlock";

@@ -169,15 +169,20 @@ h2 {
 }
 
 @media (max-width: 480px) {
+  .numberWithPoint {
+    align-items: flex-end;
+  }
+
   h5 {
     font-size: 24px;
     line-height: 29.52px;
     font-weight: 500;
+    margin-left: 5px;
   }
 
   p.numberPoint {
     font-size: 36px;
-    line-height: 44.28px;
+    line-height: 1;
   }
 
   .ourValuePoints {
@@ -188,17 +193,21 @@ h2 {
     display: block;
   }
 
-  h5 {
-    margin-left: 8px;
-  }
-
   .numberWithPoint {
     width: 100%;
   }
 
   .leftText {
     width: 100%;
-    margin-top: 4px;
+    margin-top: 10px;
+  }
+
+  .clientFull {
+    display: block;
+  }
+
+  .clientHalf {
+    display: none;
   }
 }
 </style>

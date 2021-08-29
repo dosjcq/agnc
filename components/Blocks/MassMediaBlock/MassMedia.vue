@@ -225,10 +225,31 @@ p.text {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 34px;
     grid-row-gap: 60px;
+    margin-top: 57px;
   }
 
   .massMediaContent {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .massMediaContent {
+    display: block;
+  }
+
+  .massMediaHeading {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 43.6px;
+  }
+
+  p.text {
+    max-width: none;
+    margin-top: 5px;
   }
 }
 </style>
