@@ -1,5 +1,5 @@
 <template>
-  <div class="massMediaBlock">
+  <div class="massMediaBlock" id="massMedia">
     <div class="basePadding">
       <div class="morePadding">
         <div class="massMediaContent">
@@ -175,19 +175,42 @@
   </div>
 </template>
 
+<script>
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  mounted() {
+    gsap.from(".massMediaAgencies", {
+      scrollTrigger: {
+        trigger: ".massMediaAgencies",
+        start: "top 75%"
+      },
+      delay: 0.3,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0
+    });
+  }
+};
+</script>
+
 <style scoped>
 .massMediaBlock {
   margin-top: 250px;
 }
 
 .massMediaContent {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
 }
 
-.massMediaHeading {
+/* .massMediaHeading {
   width: 50%;
-}
+} */
 
 p.text {
   max-width: 24.125vw;
@@ -202,7 +225,11 @@ p.text {
   justify-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+  .massMediaBlock {
+    margin-top: 200px;
+  }
+
   p.text {
     max-width: 32.813vw;
   }
@@ -215,7 +242,7 @@ p.text {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   p.text {
     max-width: 38.281vw;
   }
@@ -225,7 +252,6 @@ p.text {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 34px;
     grid-row-gap: 60px;
-    margin-top: 57px;
   }
 
   .massMediaContent {
@@ -233,9 +259,14 @@ p.text {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .massMediaContent {
     display: block;
+  }
+
+  .massMediaAgencies {
+    justify-items: start;
+    margin-top: 57px;
   }
 
   .massMediaHeading {

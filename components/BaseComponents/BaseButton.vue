@@ -11,8 +11,8 @@
   padding: 13px 20px;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
-  line-height: 27px;
-  font-size: 1.125vw;
+  line-height: 22.59px;
+  font-size: 18px;
   background-color: transparent;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -23,7 +23,7 @@
     border-radius: 110px/45px;
     padding: 4px 21px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 20.08px;
     font-size: 16px;
   }
 }

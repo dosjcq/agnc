@@ -1,5 +1,5 @@
 <template>
-  <div class="aboutBlock">
+  <div class="aboutBlock" id="about">
     <div class="basePadding">
       <div class="morePadding">
         <div class="displayContent">
@@ -31,6 +31,44 @@
   </div>
 </template>
 
+<script>
+import TheHeader from "~/components/Navigation/TheHeader";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+export default {
+  name: "MainBlock",
+  components: {
+    TheHeader
+  },
+  mounted: function() {
+    gsap.from(".introduceContent", {
+      scrollTrigger: {
+        trigger: ".introduceContent",
+        start: "top bottom"
+      },
+      delay: 0.3,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0
+    });
+    gsap.from(".moreAboutContentText", {
+      scrollTrigger: {
+        trigger: ".moreAboutContentText",
+        start: "top bottom"
+      },
+      delay: 0.9,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0,
+      stagger: 0.5
+    });
+  }
+};
+</script>
+
 <style scoped>
 .aboutBlock {
   margin-top: 200px;
@@ -50,7 +88,17 @@
   width: 50%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1100px) {
+  .aboutBlock {
+    margin-top: 150px;
+  }
+
+  .introduceContent {
+    width: 81.445vw;
+  }
+}
+
+@media (max-width: 800px) {
   .moreAboutContent {
     display: block;
   }
@@ -65,7 +113,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .introduceContent {
     width: 100%;
   }

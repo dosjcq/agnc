@@ -1,7 +1,7 @@
 <template>
   <div class="ourValuesBlock">
     <div class="basePadding">
-      <h2>НАШИ ЦЕННОСТИ</h2>
+      <h2 class="animate-heading">НАШИ ЦЕННОСТИ</h2>
       <div class="ourValuesContent">
         <div class="ourValuePoints">
           <div class="ourValuePoint">
@@ -78,6 +78,40 @@
   </div>
 </template>
 
+<script>
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  mounted() {
+    gsap.from(".animate-heading", {
+      scrollTrigger: {
+        trigger: ".animate-heading",
+        start: "top bottom"
+      },
+      delay: 0.3,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0
+    });
+    gsap.from(".ourValuePoint", {
+      scrollTrigger: {
+        trigger: ".ourValuePoint",
+        start: "top bottom"
+      },
+      delay: 0.3,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0,
+      stagger: 0.2
+    });
+  }
+};
+</script>
+
 <style scoped>
 .ourValuesBlock {
   margin-top: 200px;
@@ -121,7 +155,7 @@ h2 {
   margin-bottom: 60px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .ourValuePoint {
     align-items: center;
   }
@@ -139,7 +173,7 @@ h2 {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .ourValuePoints {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -168,7 +202,7 @@ h2 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .numberWithPoint {
     align-items: flex-end;
   }

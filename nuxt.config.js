@@ -25,10 +25,18 @@ export default {
         href: "https://fonts.googleapis.com/css2?family=Manrope&display=swap"
       }
     ]
+    // script: [
+    //   { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js" },
+    //   {
+    //     src:
+    //       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"
+    //   },
+    //   { src: "/vendor/SplitText.min.js" }
+    // ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/styles/base.css", "~/assets/styles/main.css", "reseter.css"],
+  css: ["~/assets/styles/base.css", "reseter.css", "~/assets/styles/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

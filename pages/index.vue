@@ -7,7 +7,6 @@
     <SmmBlock />
     <OurValuesBlock />
     <SwiperBlock />
-
     <MassMediaBlock />
     <ClientsBlock />
     <ContactsBlock />
@@ -40,7 +39,6 @@ export default {
     SmmBlock,
     OurValuesBlock,
     SwiperBlock,
-
     MassMediaBlock,
     ClientsBlock,
     ContactsBlock,

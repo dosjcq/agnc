@@ -29,6 +29,28 @@
   </div>
 </template>
 
+<script>
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  mounted() {
+    gsap.from(".smmContent", {
+      scrollTrigger: {
+        trigger: ".smmContent",
+        start: "top 75%"
+      },
+      delay: 0.3,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0
+    });
+  }
+};
+</script>
+
 <style scoped>
 .smmBlock {
   margin-top: 200px;
@@ -74,7 +96,11 @@ li:not(:first-child) {
   max-width: 26.063vw;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+  .smmBlock {
+    margin-top: 100px;
+  }
+
   .smmContent {
     grid-column-gap: 9.766vw;
   }
@@ -99,7 +125,7 @@ li:not(:first-child) {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .smmContent {
     display: block;
   }

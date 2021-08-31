@@ -33,28 +33,28 @@ a {
 
 h1 {
   font-weight: 500;
-  font-size: 3.75vw; /* 60 px */
-  line-height: 4.612vw; /* 73.792 px */
+  font-size: 60px; /* 60 px */
+  line-height: 73.792px; /* 73.792 px */
 }
 
 h2 {
-  font-size: 3.75vw; /* 60 px */
-  line-height: 4.541vw; /* 72.66 px */
+  font-size: 60px; /* 60 px */
+  line-height: 72.66px; /* 72.66 px */
 }
 
 h3 {
   font-size: 3.375vw; /* 60 px */
-  line-height: 4.151vw; /* 66.416 px */
+  line-height: 1; /* 66.416 px */
 }
 
 h4 {
-  font-size: 3.375vw; /* 60 px */
-  line-height: 4.087vw; /* 65.39 px */
+  font-size: 60px; /* 60 px */
+  line-height: 65.39px; /* 65.39 px */
 }
 
 h5 {
-  font-size: 2.25vw; /* 36px */
-  line-height: 2.768vw; /* 44.28px */
+  font-size: 36px; /* 36px */
+  line-height: 44.28px; /* 44.28px */
 }
 
 p {
@@ -72,7 +72,22 @@ p.text {
 /* БРЕЙКПОИНТЫ */
 /* БРЕЙКПОИНТЫ */
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  h3 {
+    font-size: 36px; /* 28 px */
+    line-height: 44.28px; /* 34.44 px */
+  }
+
   .basePadding {
     padding: 0 30px; /* 30px */
   }
@@ -91,26 +106,26 @@ p.text {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   h1 {
     font-weight: 500;
-    font-size: 5.625vw; /* 36 px */
-    line-height: 6.919vw; /* 44.28 px */
+    font-size: 36px; /* 36 px */
+    line-height: 44.28px; /* 44.28 px */
   }
 
   h2 {
-    font-size: 5.625vw; /* 36 px */
-    line-height: 6.813vw; /* 43.6 px */
+    font-size: 36px; /* 36 px */
+    line-height: 43.6px; /* 43.6 px */
   }
 
   h3 {
-    font-size: 4.375vw; /* 28 px */
-    line-height: 5.381vw; /* 34.44 px */
+    font-size: 28px; /* 28 px */
+    line-height: 34.44px; /* 34.44 px */
   }
 
   h5 {
-    font-size: 4.375vw; /* 28px */
-    line-height: 5.381vw; /* 34.44px */
+    font-size: 28px; /* 28px */
+    line-height: 34.44px; /* 34.44px */
   }
 
   .basePadding {
@@ -134,13 +149,13 @@ p.text {
 @media (max-width: 480px) {
   h1 {
     font-weight: 500;
-    font-size: 32px; /* 36 px */
-    line-height: 39.36px; /* 44.28 px */
+    font-size: 36px; /* 36 px */
+    line-height: 44.28px; /* 44.28 px */
   }
 
   h2 {
-    font-size: 32px; /* 36 px */
-    line-height: 38.75px; /* 43.6 px */
+    font-size: 36px; /* 36 px */
+    line-height: 43.6px; /* 43.6 px */
   }
 
   h3 {

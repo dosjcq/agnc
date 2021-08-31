@@ -1,11 +1,11 @@
 <template>
-  <div class="swiperBlock">
+  <div class="swiperBlock" id="influencers">
     <div class="basePadding">
       <div class="swiperContent">
         <div class="swiperHeading">
           <h2>ИНФЛЮЕНСЕРЫ</h2>
         </div>
-        <div class="morePadding">
+        <div class="marginFromCenter">
           <p class="text">
             Сообщество, которое окружает агентство является самым перспективным,
             молодым и желанным для брендов, которые идут в ногу со временем
@@ -133,10 +133,10 @@ export default {
           clickable: true
         },
         breakpoints: {
-          1024: {
+          1101: {
             slidesPerView: 4.5
           },
-          640: {
+          801: {
             slidesPerView: 3.5
           },
           480: {
@@ -212,11 +212,33 @@ p {
   padding-left: 10.938vw;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1100px) {
+  .swiperBlock {
+    margin-top: 200px;
+    padding: 100px 0;
+  }
+
+  .swiper {
+    margin-top: 50px;
+    padding-left: 30px;
+  }
+
+  h2 {
+    font-size: 48px; /* 60 px */
+    line-height: 58.13px; /* 72.66 px */
+  }
+}
+
+@media (max-width: 800px) {
   .swiperBlock {
     margin-top: 250px;
     background: #9389d2;
     padding: 60px 0;
+  }
+
+  .swiper {
+    margin-top: 40px;
+    padding-left: 15px;
   }
 
   .swiperContent {
@@ -241,7 +263,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .swiperBlock {
     margin-top: 250px;
     background: #9389d2;

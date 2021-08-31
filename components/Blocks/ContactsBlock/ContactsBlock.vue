@@ -32,7 +32,27 @@
           </div>
           <div class="servicesForm">
             <p class="inputGroup">Услуги</p>
-            <input type="text" placeholder="Выберите услугу" />
+            <multiselect
+              v-model="value"
+              :options="options"
+              :multiple="true"
+              :close-on-select="false"
+              :clear-on-select="false"
+              :preserve-search="true"
+              placeholder="Выберите услуги"
+              label="name"
+              track-by="name"
+              :preselect-first="false"
+            >
+              <template slot="selection.name" slot-scope="{ values, isOpen }"
+                ><span
+                  class="multiselect__single"
+                  v-if="values.length &amp;&amp; !isOpen"
+                  >{{ values.length }} options selected</span
+                ></template
+              >
+            </multiselect>
+
             <textarea
               cols="10"
               rows="5"
@@ -48,14 +68,31 @@
 
 <script>
 import BaseButton from "~/components/BaseComponents/BaseButton";
+import Multiselect from "vue-multiselect";
 
 export default {
-  name: "TheHeader",
+  name: "ContactsBlock",
   components: {
-    BaseButton
+    BaseButton,
+    Multiselect
+  },
+  data() {
+    return {
+      value: [],
+      options: [
+        { name: "Vue.js", language: "JavaScript" },
+        { name: "Adonis", language: "JavaScript" },
+        { name: "Rails", language: "Ruby" },
+        { name: "Sinatra", language: "Ruby" },
+        { name: "Laravel", language: "PHP" },
+        { name: "Phoenix", language: "Elixir" }
+      ]
+    };
   }
 };
 </script>
+
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
 <style scoped>
 .contactBlock {
@@ -68,17 +105,17 @@ export default {
   grid-template-rows: repeat(2, auto);
 }
 
-.contactHeading {
+/* .contactHeading {
   width: 50%;
-}
+} */
 
 h2 {
   margin-bottom: 18px;
 }
 
-.contactHeadingText {
+/* .contactHeadingText {
   max-width: 28.5vw;
-}
+} */
 
 a {
   font-weight: 500;
@@ -172,9 +209,18 @@ textarea::placeholder {
   color: #828282;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1100px) {
+  .contactBlock {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contactBlock {
+    margin-top: 150px;
+  }
+
   .contactContent {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
   }
@@ -209,6 +255,61 @@ textarea::placeholder {
     margin-top: 40px;
   }
 
+  .contacts {
+    grid-row: 3/4;
+  }
+
+  .inputGroup {
+    font-size: 18x;
+    line-height: 27px;
+    margin-bottom: 10px;
+  }
+
+  .userContactsForm {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .contactHeading {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  .contactHeadingText {
+    max-width: 98%;
+  }
+
+  a {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .contacts {
+    margin-top: 100px;
+  }
+
+  .contact:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .contactForm {
+    grid-row: 2/3;
+    margin-top: 40px;
+  }
+
+  .contacts {
+    grid-row: 3/4;
+  }
+
   .inputGroup {
     font-size: 24px;
     line-height: 36px;
@@ -217,27 +318,6 @@ textarea::placeholder {
 
   .userContactsForm {
     margin-bottom: 40px;
-  }
-
-  textarea {
-    margin-top: 30px;
-    width: 100%;
-    border: 1px solid #141414;
-    font-family: "Manrope", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #828282;
-    padding: 10px 0 0 10px;
-    margin-bottom: 25px;
-  }
-
-  textarea::placeholder {
-    font-family: "Manrope", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #828282;
   }
 }
 </style>

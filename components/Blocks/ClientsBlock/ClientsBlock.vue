@@ -88,19 +88,42 @@
   </div>
 </template>
 
+<script>
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  mounted() {
+    gsap.from(".clientsAgencies", {
+      scrollTrigger: {
+        trigger: ".clientsAgencies",
+        start: "top 75%"
+      },
+      delay: 0.3,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0
+    });
+  }
+};
+</script>
+
 <style scoped>
 .clientsBlock {
   margin-top: 250px;
 }
 
 .clientsContent {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
 }
 
-.clientsHeading {
+/* .clientsHeading {
   width: 50%;
-}
+} */
 
 p.text {
   max-width: 24.125vw;
@@ -112,17 +135,18 @@ p.text {
   grid-column-gap: 60px;
   grid-row-gap: 65px;
   align-items: center;
-}
-
-.clientsLogos {
-  margin: 0 auto;
+  justify-items: center;
 }
 
 .clientsLogos:last-child {
   grid-column: 2 / 3;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+  .clientsBlock {
+    margin-top: 150px;
+  }
+
   p.text {
     max-width: 31.25vw;
   }
@@ -135,7 +159,20 @@ p.text {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
+  p.text {
+    max-width: 38.281vw;
+  }
+
+  .clientsAgencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 34px;
+    grid-row-gap: 60px;
+  }
+}
+
+@media (max-width: 550px) {
   .clientsContent {
     display: block;
   }
@@ -145,10 +182,7 @@ p.text {
   }
 
   .clientsAgencies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 34px;
-    grid-row-gap: 60px;
+    justify-items: start;
     margin-top: 57px;
   }
 

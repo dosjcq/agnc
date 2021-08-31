@@ -4,7 +4,7 @@
     <section class="basePadding">
       <div class="morePadding">
         <div class="mainItem">
-          <div class="mainHeading d">AGNC —</div>
+          <div class="mainHeading">AGNC —</div>
           <p class=" mainBlockText first">
             Помогаем нашим клиентам обрести лояльную аудиторию и широкую
             узнаваемость, популяризировать их экологические и благотворительные
@@ -32,26 +32,89 @@
 
 <script>
 import TheHeader from "~/components/Navigation/TheHeader";
+import { gsap } from "gsap";
+// import { SplitText } from "gsap/SplitText";
 
+// gsap.registerPlugin(SplitText);
 export default {
   name: "MainBlock",
   components: {
     TheHeader
-  }
+  },
+  mounted: function() {
+    // const mainHeadings = document.querySelectorAll(".mainHeading");
+
+    // mainHeadings.forEach(mainHeading => {
+    //   mainHeading.split = new SplitText(mainHeading, {
+    //     type: "lines,words,chars",
+    //     linesClass: "split-line"
+    //   });
+    // });
+
+    // mainHeading.anim = gsap.from(mainHeading.split.chars, {
+    //   scrollTrigger: {
+    //     trigger: ".mainHeading",
+    //     toggleActions: "restart pause resume reverse",
+    //     start: "top 50%"
+    //   },
+    //   duration: 0.6,
+    //   ease: "circ.out",
+    //   y: 80,
+
+    //   stagger: 0.02
+    // });
+    gsap.from(".mainHeading", {
+      delay: 0.2,
+      duration: 0.8,
+      ease: "power2.out",
+      y: 100,
+      opacity: 0,
+      stagger: 0.15
+    });
+    gsap.from(".mainBlockText", {
+      delay: 1,
+      duration: 0.8,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0,
+      stagger: 0.15
+    });
+  },
+  // function() {
+  //   gsap.from(".mainHeading", {
+  //     scrollTrigger: {
+  //       trigger: ".mainHeading",
+  //       toggleActions: "restart pause resume reverse",
+  //       start: "top 50%"
+  //     },
+  //     duration: 2,
+  //     ease: "circ.out",
+  //     y: 100,
+  //     opacity: 0,
+  //     stagger: 0.2
+  //   });
+  // },
+  methods: {}
 };
 </script>
 
 <style scoped>
+.split-line {
+  overflow: hidden;
+}
+
 .mainBlock {
   background-image: url("~/assets/images/BG.png");
-
   height: 100vh;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
-  margin-top: 90px;
+  margin: auto 0;
+  padding-bottom: 40px;
 }
 
 .mainItem {
@@ -90,17 +153,17 @@ section {
   margin-right: 29px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .mainItem:nth-child(2) .mainHeading:first-child {
     margin-right: 15px;
   }
 
-  section {
+  /* section {
     margin-top: 144px;
-  }
+  } */
 
   .mainHeading {
-    font-size: 9.375vw;
+    font-size: 10.375vw;
   }
 
   .mainBlockText {
@@ -112,13 +175,9 @@ section {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .mainItem:nth-child(2) .mainHeading:first-child {
     margin-right: 17px;
-  }
-
-  section {
-    margin-top: 0;
   }
 
   .mainHeading {
@@ -126,7 +185,7 @@ section {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .mainBlock {
     display: flex;
     flex-direction: column;

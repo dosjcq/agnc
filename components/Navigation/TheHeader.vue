@@ -5,10 +5,10 @@
     </div>
     <div class="navigation">
       <ul class="textManrope">
-        <li>Об агенстве</li>
-        <li>Услуги</li>
-        <li>Инфлюенсеры</li>
-        <li>Партнеры</li>
+        <li @click="scrollToAbout">Об агенстве</li>
+        <li @click="scrollToServices">Услуги</li>
+        <li @click="scrollToInfluencerst">Инфлюенсеры</li>
+        <li @click="scrollToClients">Партнеры</li>
       </ul>
       <base-button class="wideDispaly">Оставить заявку</base-button>
       <base-button class="smallDisplay">Меню</base-button>
@@ -18,11 +18,44 @@
 
 <script>
 import BaseButton from "~/components/BaseComponents/BaseButton";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin.js";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default {
   name: "TheHeader",
   components: {
     BaseButton
+  },
+  methods: {
+    scrollToAbout() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#about", offsetY: 70 },
+        offsetY: -70
+      });
+    },
+    scrollToServices() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#services", offsetY: 70 },
+        offsetY: -70
+      });
+    },
+    scrollToInfluencerst() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#influencers", offsetY: 70 },
+        offsetY: -70
+      });
+    },
+    scrollToClients() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#massMedia", offsetY: 70 }
+      });
+    }
   }
 };
 </script>
@@ -50,24 +83,17 @@ li {
   margin-right: 30px;
   font-weight: 400;
   line-height: 27px;
-  font-size: 1.125vw;
+  font-size: 18;
+  cursor: pointer;
 }
 
 .smallDisplay {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   header {
-    margin: 0 2.93vw;
-  }
-
-  li {
-    list-style: none;
-    margin-right: 30px;
-    font-weight: 400;
-    line-height: 27px;
-    font-size: 1.125vw;
+    margin: 0 30px;
   }
 
   li:nth-child(3) {
@@ -75,7 +101,11 @@ li {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
+  header {
+    margin: 0 15px;
+  }
+
   ul {
     display: none;
   }
@@ -88,4 +118,18 @@ li {
     display: block;
   }
 }
+
+/* @media (max-width: 480px) {
+  ul {
+    display: none;
+  }
+
+  .wideDispaly {
+    display: none;
+  }
+
+  .smallDisplay {
+    display: block;
+  }
+} */
 </style>

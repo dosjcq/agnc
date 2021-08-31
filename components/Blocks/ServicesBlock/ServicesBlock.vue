@@ -1,5 +1,5 @@
 <template>
-  <div class="servicesBlock">
+  <div class="servicesBlock" id="services">
     <div class="basePadding">
       <div class="morePadding">
         <div class="servicesContent">
@@ -20,12 +20,22 @@
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                        Consulting
+                        <ul>
+                          <li>Аудит вашего бренда и консультации по его
+                        улучшению</li>
+                        </ul>
+                      </p>
+                      <p class="headingAccordion">
+                        Brand Development
+                        <ul>
+                          <li>Анализ рынка и маркетинговые исследования</li>
+                          <li>Разработка концепции вашего продукта с нуля и создание его конкурентного преимущества</li>
+                          <li>Разработка фирменного стиля и бренд-бука</li>
+                          <li>Разработка бренд-стратегии 360 </li>
+                          <li>Бренд-менеджмент</li>
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -39,12 +49,20 @@
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                        Продвижение и повышение узнаваемости брендов
+                        <ul>
+                          <li>Создание истории вашего бренда</li>
+                          <li>Разработка позиционирования бренда</li>
+                          <li>Разработка коммуникационной стратегии</li>
+                          <li>Определение целей</li>
+                          <li>Медиапланирование </li>
+                          <li>Консалтинг </li>
+                          <li>Определение ключевого маркетингового сообщения</li>
+                          <li>Стратегичесие партнерства </li>
+                          <li>Pr-поддержка ключевых локальных СМИ (Print+Digital) </li>
+                          <li>Influencer marketing </li>
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -53,17 +71,18 @@
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
-                    <p class="accordion-heading">PRODUCTION</p>
+                    <p class="accordion-heading">CONTENT PRODUCTION</p>
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                        Ведение под ключ фото- видео- съемок
+                        <ul>
+                          <li>Разработка креативных концепций</li>
+                          <li>Производство фото и видео контента</li>
+                          <li>Разработка графических и motion креативов</li>
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -72,17 +91,20 @@
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
-                    <p class="accordion-heading">SMM</p>
+                    <p class="accordion-heading">EVENT MARKETING</p>
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                        Организация и проведение мероприятий
+                        <ul>
+                          <li>Разработка концепций мероприятий</li>
+                          <li>Guest Management</li>
+                          <li>Декор</li>
+                          <li>Интеграции в мероприятия партнеров </li>
+                          <li>Pr-поддержка</li>
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -91,17 +113,21 @@
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
-                    <p class="accordion-heading">EVENTS</p>
+                    <p class="accordion-heading">STYLIST</p>
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                        Персональный имидж консалтинг - разработка фирменного стиля и реализация х Ester Shenkman 
+                        <ul>
+                          <li>Консультация</li>
+                          <li>Разбор гардероба</li>
+                          <li>Шопинг</li>
+                          <li>Интеграции в мероприятия партнеров </li>
+                          <li>Ревизия гардероба</li>
+                          <li>Сопровождение</li>
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -110,36 +136,21 @@
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
-                    <p class="accordion-heading">STUDIO</p>
+                    <p class="accordion-heading">BRANDING / DESIGN</p>
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                  </template>
-                </accordion-item>
-
-                <accordion-item>
-                  <!-- This slot will handle the title/header of the accordion and is the part you click on -->
-                  <template slot="accordion-trigger">
-                    <p class="accordion-heading">COURSES</p>
-                  </template>
-                  <!-- This slot will handle all the content that is passed to the accordion -->
-                  <template slot="accordion-content">
-                    <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                         
+                        <ul>
+                          <li>Брендинг</li>
+                          <li>Разработка сайтов</li>
+                          <li>Разработка брендбука</li>
+                          <li>Разработка логотипа </li>
+                          <li>Оформление соцсетей</li>
+                          <li>2D/3D-анимация</li>
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -153,12 +164,27 @@
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                        Разработка и производство полиграфической продукции для вашего бизнеса
+                      </p>
+                    </div>
+                  </template>
+                </accordion-item>
+
+                <accordion-item>
+                  <!-- This slot will handle the title/header of the accordion and is the part you click on -->
+                  <template slot="accordion-trigger">
+                    <p class="accordion-heading">ONLINE COURSES</p>
+                  </template>
+                  <!-- This slot will handle all the content that is passed to the accordion -->
+                  <template slot="accordion-content">
+                    <div class="contentAccord">
+                      <p class="headingAccordion">
+                        Разработка идеи вашего онлайн курса 
+                        <ul>
+                          <li>Производство обучающего фото и видео-контента</li>
+                          <li>Организации онлайн школы для вашего бизнеса</li>  
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -172,31 +198,16 @@
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                  </template>
-                </accordion-item>
-
-                <accordion-item>
-                  <!-- This slot will handle the title/header of the accordion and is the part you click on -->
-                  <template slot="accordion-trigger">
-                    <p class="accordion-heading">BRENDING</p>
-                  </template>
-                  <!-- This slot will handle all the content that is passed to the accordion -->
-                  <template slot="accordion-content">
-                    <div class="contentAccord">
-                      <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <p class="headingAccordion">
+                        Оригинальные проекты AGNC 
+                        <ul>
+                          <li><a href="http://my-cardgame.com/3/">Настольная игры МЫ</a><br>Игра создана для того, чтобы узнать друг друга ближе и завести интересный разговор, а также для развития эмоционального интеллекта. Все вопросы разработаны вместе с профессиональным коучем и рассчитаны на глубокое погружение друг в друга и себя.</li>
+                          <li>Экологичный просветительский проект <a href="https://www.instagram.com/reverse.russia/?hl=ru">REVERSE</a></li>  
+                          <li>Студия (cooming soon)</li>  
+                          <li>Курсы AGNC (cooming soon)</li>  
+                          <li>Book (cooming soon)</li>  
+                          <li>YouTube (cooming soon)</li>  
+                        </ul>
                       </p>
                     </div>
                   </template>
@@ -255,6 +266,32 @@ p {
   color: #141414;
 }
 
+.headingAccordion {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+ul {
+  margin-top: 8px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+li {
+ font-size: 20px;
+  line-height: 180%; 
+  font-weight: 400;
+}
+
+a {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  line-height: 180%; 
+  font-weight: 400;
+  text-decoration: underline;
+}
+
 .contentAccord {
   margin-top: 20px;
 }
@@ -263,6 +300,12 @@ p {
   font-size: 24px;
   font-weight: normal;
   line-height: 33px;
+}
+
+@media (max-width: 1024px) {
+  .servicesBlock {
+    margin-top: 200px;
+  }
 }
 
 @media (max-width: 640px) {

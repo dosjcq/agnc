@@ -31,18 +31,45 @@
               брендам полный спектр услуг для их развития и продвижения как на
               Российском, так и международном рынке
             </p>
-            <p class="smallCeoHistory text">
-              Имея 7-летний опыт работы в медиаиндустрии, Ольга с головой
-              окунулась в журналистику, рекламу и маркетинг. Она вышла за рамки
-              мира моды, заняв рабочее место в топовых модных медиа-
-              конгломератах мира, базирующихся в России
-            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  mounted() {
+    gsap.from(".ceoImg", {
+      scrollTrigger: {
+        trigger: ".ceoImg",
+        start: "top 75%"
+      },
+      delay: 0.3,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0
+    });
+    gsap.from(".ceoInfo", {
+      scrollTrigger: {
+        trigger: ".ceoInfo",
+        start: "top 75%"
+      },
+      delay: 0.9,
+      duration: 0.6,
+      ease: "power2.out",
+      y: 50,
+      opacity: 0
+    });
+  }
+};
+</script>
 
 <style scoped>
 .ceoBlock {
@@ -58,7 +85,17 @@
 
 .ceoInfo {
   display: grid;
-  grid-row-gap: 86px;
+  grid-template-rows: repeat(2, auto);
+}
+
+.ceoName {
+  align-self: start;
+  margin-bottom: 12px;
+}
+
+.ceoImg {
+  width: 100%;
+  padding-right: 5.938vw;
 }
 
 img {
@@ -79,46 +116,29 @@ img {
   margin-top: 20px;
 }
 
-.smallCeoHistory {
-  display: none;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .ceoImg {
-    margin-right: 40px;
+    padding-right: 40px;
   }
 
   .ceoInfo {
     display: grid;
-    grid-row-gap: 115px;
   }
 
   img {
-    max-height: 800px;
+    /* max-height: 800px; */
     object-fit: contain;
   }
 
   .companyHistory {
     align-self: end;
   }
-
-  .ceoHistory:last-child {
-    display: none;
-  }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .ceoPosition {
     line-height: 20.49px;
     font-size: 2.344vw;
-  }
-
-  .ceoHistory {
-    display: none;
-  }
-
-  .smallCeoHistory {
-    display: block;
   }
 }
 
@@ -128,7 +148,7 @@ img {
   }
 
   .ceoImg {
-    margin-right: 0;
+    padding-right: 0;
   }
 
   .ceoPosition {
