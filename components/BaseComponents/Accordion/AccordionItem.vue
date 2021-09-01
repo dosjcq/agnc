@@ -13,7 +13,7 @@
         viewBox="0 0 31 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        :class="{ rotateArrow: toggleArrow }"
+        :class="{ rotateArrow: visible }"
       >
         <path
           d="M0 10.5H30.5M30.5 10.5C22.5128 10.5221 20.3511 8.5133 21 1M30.5 10.5C22.5272 10.5079 20.1642 12.3511 21 20"
@@ -45,8 +45,7 @@ export default {
   inject: ["Accordion"],
   data() {
     return {
-      index: null,
-      toggleArrow: false
+      index: null
     };
   },
   computed: {
@@ -58,10 +57,8 @@ export default {
     open() {
       if (this.visible) {
         this.Accordion.active = null;
-        this.toggleArrow = false;
       } else {
         this.Accordion.active = this.index;
-        this.toggleArrow = true;
       }
     },
     start(el) {
