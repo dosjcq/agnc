@@ -1,0 +1,70 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="1600" height="900" fill="#9389D2"/>
+<g filter="url(#filter0_f)">
+<ellipse cx="215.238" cy="90.5217" rx="417.703" ry="419.522" fill="#9389D2"/>
+</g>
+<g filter="url(#filter1_f)">
+<ellipse cx="818.071" cy="517.567" rx="383.623" ry="281.377" fill="#89D2A5">
+<animate attributeName='cx' values='818.071; 600; 818.071' dur='7s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='417.567; 700; 417.567' dur='8s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='383.623; 250; 383.623' dur='8s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='281.377; 350; 281.377' dur='9s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+<g filter="url(#filter2_f)">
+<ellipse cx="104.199" cy="854.946" rx="381.199" ry="393.77" fill="#89D2CD">
+<animate attributeName='cx' values='104.199; 200; 104.199' dur='7s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='854.946; 600; 854.946' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='381.199; 220; 381.199' dur='8s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='393.77; 420; 393.77' dur='9s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+<g filter="url(#filter3_f)">
+<ellipse cx="1597.38" cy="896.113" rx="465.599" ry="415.843" fill="#89BFD2">
+<animate attributeName='cx' values='1597.38; 1450; 1597.38' dur='15s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='896.113; 850; 896.113' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='465.599; 600; 465.599' dur='8s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='415.843; 450; 415.843' dur='10s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+<g filter="url(#filter4_f)">
+<ellipse cx="1598.19" cy="138.288" rx="479.605" ry="403.989" fill="#92FF6B">
+<animate attributeName='cx' values='1598.19; 1600; 1598.19' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='138.288; 220; 138.288' dur='9s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='479.605; 400; 479.605' dur='15s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='403.989; 500; 403.989' dur='12s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+</g>
+<defs>
+<filter id="filter0_f" x="-468.464" y="-595" width="1367.41" height="1371.04" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="133" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter1_f" x="0" y="-29.8105" width="1600" height="1094.75" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="133" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter2_f" x="0" y="0" width="1800" height="1500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="133" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter3_f" x="0" y="214.27" width="1600" height="1363.69" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="133" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter4_f" x="300" y="0" width="1800" height="1339.98" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="133" result="effect1_foregroundBlur"/>
+</filter>
+<clipPath id="clip0">
+<rect width="1600" height="900" fill="white"/>
+</clipPath>
+</defs>
+</svg>
