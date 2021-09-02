@@ -29,11 +29,11 @@
 </ellipse>
 </g>
 <g filter="url(#filter4_f)">
-<ellipse cx="346.5" cy="119.5" rx="194.5" ry="164.5" fill="#92FF6B">
-<animate attributeName='cx' values='346.5; 250; 346.5' dur='8s' repeatCount='indefinite'></animate>
+<ellipse cx="346.5" cy="119.5" rx="175" ry="110" fill="#92FF6B">
+<animate attributeName='cx' values='346.5; 290; 346.5' dur='8s' repeatCount='indefinite'></animate>
 <animate attributeName='cy' values='119.5; 150; 119.5' dur='12s' repeatCount='indefinite'></animate>
-<animate attributeName='rx' values='194.5; 200; 194.5' dur='10s' repeatCount='indefinite'></animate>
-<animate attributeName='ry' values='164.5; 120; 164.5' dur='6s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='175; 200; 175' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='110; 130; 110' dur='6s' repeatCount='indefinite'></animate>
 </ellipse>
 </g>
 </g>
