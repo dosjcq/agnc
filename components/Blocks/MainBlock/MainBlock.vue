@@ -182,7 +182,7 @@ section {
 
   section {
     margin: auto 0;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
   }
 }
 </style>

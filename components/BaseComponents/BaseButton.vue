@@ -16,6 +16,12 @@
   background-color: transparent;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  border-color: #9389d2;
+  color: #9389d2;
 }
 
 @media (max-width: 640px) {

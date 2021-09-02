@@ -279,8 +279,8 @@ ul {
 }
 
 li {
- font-size: 20px;
-  line-height: 180%; 
+ font-size: 16px;
+  line-height: 150%; 
   font-weight: 400;
 }
 

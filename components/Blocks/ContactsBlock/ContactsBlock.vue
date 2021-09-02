@@ -164,6 +164,7 @@ input:focus-visible {
   border-left: none;
   border-right: none;
   border-color: black;
+  outline: none;
 }
 
 .userContactsForm input:nth-child(2) {
