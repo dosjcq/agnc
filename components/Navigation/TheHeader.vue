@@ -18,7 +18,7 @@
 
 <script>
 import BaseButton from "~/components/BaseComponents/BaseButton";
-import { gsap } from "gsap/dist/gsap";
+import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin.js";
 
 gsap.registerPlugin(ScrollToPlugin);

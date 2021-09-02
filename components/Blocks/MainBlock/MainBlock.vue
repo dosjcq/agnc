@@ -1,7 +1,7 @@
 <template>
   <div class="mainBlock">
     <TheHeader />
-    <section class="basePadding">
+    <section class="basePadding" :class="{ readyShow: ready }">
       <div class="morePadding">
         <div class="mainItem">
           <div class="mainHeading">AGNC —</div>
@@ -41,28 +41,12 @@ export default {
   components: {
     TheHeader
   },
-  mounted: function() {
-    // const mainHeadings = document.querySelectorAll(".mainHeading");
-
-    // mainHeadings.forEach(mainHeading => {
-    //   mainHeading.split = new SplitText(mainHeading, {
-    //     type: "lines,words,chars",
-    //     linesClass: "split-line"
-    //   });
-    // });
-
-    // mainHeading.anim = gsap.from(mainHeading.split.chars, {
-    //   scrollTrigger: {
-    //     trigger: ".mainHeading",
-    //     toggleActions: "restart pause resume reverse",
-    //     start: "top 50%"
-    //   },
-    //   duration: 0.6,
-    //   ease: "circ.out",
-    //   y: 80,
-
-    //   stagger: 0.02
-    // });
+  data() {
+    return {
+      ready: true
+    };
+  },
+  mounted() {
     gsap.from(".mainHeading", {
       delay: 0.2,
       duration: 0.8,
@@ -79,7 +63,9 @@ export default {
       opacity: 0,
       stagger: 0.15
     });
-  },
+
+    this.ready = !this.ready;
+  }
   // function() {
   //   gsap.from(".mainHeading", {
   //     scrollTrigger: {
@@ -94,11 +80,14 @@ export default {
   //     stagger: 0.2
   //   });
   // },
-  methods: {}
 };
 </script>
 
 <style scoped>
+.readyShow {
+  display: none;
+}
+
 .split-line {
   overflow: hidden;
 }
