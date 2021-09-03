@@ -214,6 +214,10 @@ p {
   padding-right: 10.938vw; */
 }
 
+.swiper-container {
+  padding-right: 10.938vw;
+}
+
 @media (max-width: 1100px) {
   .swiperBlock {
     margin-top: 200px;
@@ -223,6 +227,10 @@ p {
   .swiper {
     margin-top: 50px;
     padding-left: 30px;
+  }
+
+  .swiper-container {
+    padding-right: 30px;
   }
 
   h2 {
@@ -241,6 +249,10 @@ p {
   .swiper {
     margin-top: 40px;
     padding-left: 15px;
+  }
+
+  .swiper-container {
+    padding-right: 15px;
   }
 
   .swiperContent {

@@ -61,7 +61,7 @@ export default {
         trigger: ".ceoInfo",
         start: "top 75%"
       },
-      delay: 0.9,
+      delay: 0.6,
       duration: 0.6,
       ease: "power2.out",
       y: 50,

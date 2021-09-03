@@ -9,7 +9,7 @@
         <li @click="scrollToServices">Услуги</li>
         <li @click="scrollToInfluencers">Инфлюенсеры</li>
         <li @click="scrollToClients">Партнеры</li>
-        <li class="ellipseButton">Оставить заявку</li>
+        <li class="ellipseButton" @click="scrollToContacts">Оставить заявку</li>
       </ul>
       <li class="ellipseButton smallDisplay" @click="toggleBurger">Меню</li>
       <!-- <base-button class="wideDispaly">Оставить заявку</base-button>
@@ -66,6 +66,12 @@ export default {
       gsap.to(window, {
         duration: 1,
         scrollTo: { y: "#massMedia", offsetY: 70 }
+      });
+    },
+    scrollToContacts() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#contacts", offsetY: 70 }
       });
     }
   }

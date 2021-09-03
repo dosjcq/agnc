@@ -58,7 +58,7 @@ export default {
         trigger: ".moreAboutContentText",
         start: "top bottom"
       },
-      delay: 0.9,
+      delay: 0.5,
       duration: 0.6,
       ease: "power2.out",
       y: 50,
@@ -80,7 +80,7 @@ export default {
 
 .moreAboutContent {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 30px;
 }
 

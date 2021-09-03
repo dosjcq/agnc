@@ -90,7 +90,7 @@ export default {
         trigger: ".animate-heading",
         start: "top bottom"
       },
-      delay: 0.3,
+      delay: 0.2,
       duration: 0.6,
       ease: "power2.out",
       y: 50,
@@ -101,7 +101,7 @@ export default {
         trigger: ".ourValuePoint",
         start: "top bottom"
       },
-      delay: 0.3,
+      delay: 0.2,
       duration: 0.6,
       ease: "power2.out",
       y: 50,

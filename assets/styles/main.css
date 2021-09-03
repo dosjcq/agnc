@@ -75,6 +75,11 @@ li.ellipseButton {
   margin-right: 0;
   margin-left: 15px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+li.ellipseButton:hover {
+  color: #9389d2;
 }
 
 li.ellipseButton::before {
@@ -88,6 +93,15 @@ li.ellipseButton::before {
   transform: translate(-50%, -50%);
   pointer-events: none;
   top: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+li:focus-visible {
+  outline: none;
+}
+
+li.ellipseButton:hover::before {
+  border-color: #9389d2;
 }
 
 /* БРЕЙКПОИНТЫ */

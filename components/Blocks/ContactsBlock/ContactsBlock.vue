@@ -64,7 +64,7 @@
                   ></template
                 >
               </multiselect>
-              {{ value }}
+
               <textarea
                 cols="10"
                 rows="5"
@@ -97,18 +97,23 @@ export default {
       userDetails: "",
       value: [],
       options: [
-        { name: "Vue.js", language: "JavaScript" },
-        { name: "Adonis", language: "JavaScript" },
-        { name: "Rails", language: "Ruby" },
-        { name: "Sinatra", language: "Ruby" },
-        { name: "Laravel", language: "PHP" },
-        { name: "Phoenix", language: "Elixir" }
+        { name: "Consulting & Brand Development" },
+        { name: "PR & Marketing" },
+        { name: "Content Production" },
+        { name: "Event Marketing" },
+        { name: "Stylist" },
+        { name: "Books" },
+        { name: "Online Courses" },
+        { name: "Originals" },
+        { name: "Creative Services" },
+        { name: "Взаимодейсвие с аудиторией" },
+        { name: "Личный PR" }
       ]
     };
   },
   methods: {
     submit() {
-      console.log("hui");
+      console.log("hello");
     }
   }
 };
@@ -251,6 +256,10 @@ li.ellipseButton::before {
   transform: translate(-50%, -50%);
   pointer-events: none;
   top: 50%;
+}
+
+li.ellipseButton:hover::before {
+  border-color: #9389d2;
 }
 
 button {
