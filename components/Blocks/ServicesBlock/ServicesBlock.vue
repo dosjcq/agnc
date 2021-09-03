@@ -215,7 +215,8 @@
               </accordion>
             </div>
             <!--end -->
-            <base-button>Оставить заявку</base-button>
+            <!-- <base-button>Оставить заявку</base-button> -->
+            <li class="ellipseButton">Оставить заявку</li>
           </div>
         </div>
       </div>
@@ -226,13 +227,13 @@
 <script>
 import Accordion from "~/components/BaseComponents/Accordion/Accordion";
 import AccordionItem from "~/components/BaseComponents/Accordion/AccordionItem";
-import BaseButton from "~/components/BaseComponents/BaseButton";
+
 
 export default {
   components: {
     Accordion,
     AccordionItem,
-    BaseButton
+   
   }
 };
 </script>
@@ -282,6 +283,26 @@ li {
  font-size: 16px;
   line-height: 150%; 
   font-weight: 400;
+}
+
+li.ellipseButton {
+  font-size: 18px;
+  line-height: 120%;
+  display: inline-block;
+  /* padding: 16px 16px; */
+}
+
+li.ellipseButton::before {
+  content: "";
+  border: 1px solid #141414;
+  left: 50%;
+  height: 3rem;
+  position: absolute;
+  width: 130%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  top: 50%;
 }
 
 a {

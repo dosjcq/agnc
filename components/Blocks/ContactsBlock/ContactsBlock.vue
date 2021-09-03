@@ -1,5 +1,5 @@
 <template>
-  <div class="contactBlock">
+  <div class="contactBlock" id="contacts">
     <div class="basePadding">
       <div class="contactContent">
         <div class="contactHeading">
@@ -25,41 +25,57 @@
         </div>
 
         <div class="contactForm morePadding">
-          <div class="userContactsForm">
-            <p class="inputGroup">Ваши контакты</p>
-            <input type="text" placeholder="Имя" />
-            <input type="email" placeholder="Почта" />
-          </div>
-          <div class="servicesForm">
-            <p class="inputGroup">Услуги</p>
-            <multiselect
-              v-model="value"
-              :options="options"
-              :multiple="true"
-              :close-on-select="false"
-              :clear-on-select="false"
-              :preserve-search="true"
-              placeholder="Выберите услуги"
-              label="name"
-              track-by="name"
-              :preselect-first="false"
-            >
-              <template slot="selection.name" slot-scope="{ values, isOpen }"
-                ><span
-                  class="multiselect__single"
-                  v-if="values.length &amp;&amp; !isOpen"
-                  >{{ values.length }} options selected</span
-                ></template
+          <form @submit.prevent="submit">
+            <div class="userContactsForm">
+              <p class="inputGroup">Ваши контакты</p>
+              <input
+                required
+                type="text"
+                placeholder="Имя"
+                v-model="userName"
+              />
+              <input
+                required
+                type="email"
+                placeholder="Почта"
+                v-model="userMail"
+              />
+            </div>
+            <div class="servicesForm">
+              <p class="inputGroup">Услуги</p>
+              <multiselect
+                required
+                v-model="value"
+                :options="options"
+                :multiple="true"
+                :close-on-select="false"
+                :clear-on-select="false"
+                :preserve-search="true"
+                placeholder="Выберите услуги"
+                label="name"
+                track-by="name"
+                :preselect-first="false"
               >
-            </multiselect>
-
-            <textarea
-              cols="10"
-              rows="5"
-              placeholder="Расскажите про вашу задачу"
-            ></textarea>
-            <base-button>Оставить бриф</base-button>
-          </div>
+                <template slot="selection.name" slot-scope="{ values, isOpen }"
+                  ><span
+                    class="multiselect__single"
+                    v-if="values.length &amp;&amp; !isOpen"
+                    >{{ values.length }} options selected</span
+                  ></template
+                >
+              </multiselect>
+              {{ value }}
+              <textarea
+                cols="10"
+                rows="5"
+                placeholder="Расскажите про вашу задачу"
+                v-model="userDetails"
+              ></textarea>
+            </div>
+            <li class="ellipseButton">
+              <button type="submit">ОТПРАВИТЬ БРИФ</button>
+            </li>
+          </form>
         </div>
       </div>
     </div>
@@ -67,17 +83,18 @@
 </template>
 
 <script>
-import BaseButton from "~/components/BaseComponents/BaseButton";
 import Multiselect from "vue-multiselect";
 
 export default {
   name: "ContactsBlock",
   components: {
-    BaseButton,
     Multiselect
   },
   data() {
     return {
+      userName: "",
+      userMail: "",
+      userDetails: "",
       value: [],
       options: [
         { name: "Vue.js", language: "JavaScript" },
@@ -88,6 +105,11 @@ export default {
         { name: "Phoenix", language: "Elixir" }
       ]
     };
+  },
+  methods: {
+    submit() {
+      console.log("hui");
+    }
   }
 };
 </script>
@@ -208,6 +230,36 @@ textarea::placeholder {
   font-size: 20px;
   line-height: 30px;
   color: #828282;
+}
+
+li.ellipseButton {
+  font-size: 18px;
+  line-height: 120%;
+  display: inline-block;
+  margin-top: 15px;
+  /* padding: 16px 16px; */
+}
+
+li.ellipseButton::before {
+  content: "";
+  border: 1px solid #141414;
+  left: 50%;
+  height: 3rem;
+  position: absolute;
+  width: 130%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  top: 50%;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+button:focus {
+  outline: none;
 }
 
 @media (max-width: 1100px) {

@@ -68,6 +68,28 @@ p.text {
   line-height: 30px;
 }
 
+li.ellipseButton {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: inherit;
+  margin-right: 0;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+li.ellipseButton::before {
+  content: "";
+  border: 1px solid #141414;
+  left: 50%;
+  height: 2.4rem;
+  position: absolute;
+  width: 120%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  top: 50%;
+}
+
 /* БРЕЙКПОИНТЫ */
 /* БРЕЙКПОИНТЫ */
 /* БРЕЙКПОИНТЫ */
