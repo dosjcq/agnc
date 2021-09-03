@@ -214,9 +214,9 @@ p {
   padding-right: 10.938vw; */
 }
 
-.swiper-container {
+/* .swiper-container {
   padding-right: 10.938vw;
-}
+} */
 
 @media (max-width: 1100px) {
   .swiperBlock {
