@@ -21,8 +21,8 @@
           width="100%"
         />
         <div class="infData">
-          <p class="infName">Анка Ахалая</p>
-          <p class="infCareer">Модель</p>
+          <p class="infName">Лида Иванькова</p>
+          <p class="infCareer">Владелица студии красоты My Dear Body</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -33,7 +33,7 @@
         />
         <div class="infData">
           <p class="infName">Дарина Фаизова</p>
-          <p class="infCareer">Модель</p>
+          <p class="infCareer">Режиссер</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -43,8 +43,8 @@
           width="100%"
         />
         <div class="infData">
-          <p class="infName">Сарина Турецкая</p>
-          <p class="infCareer">Модель</p>
+          <p class="infName">Саша Маниович</p>
+          <p class="infCareer">Дизайнер украшений Maniovich.Am</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -54,8 +54,8 @@
           width="100%"
         />
         <div class="infData">
-          <p class="infName">Тамара mp3</p>
-          <p class="infCareer">Певица</p>
+          <p class="infName">Даша Ксенз</p>
+          <p class="infCareer">Дизайнер спортивной одежды Almond Crew</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -65,8 +65,8 @@
           width="100%"
         />
         <div class="infData">
-          <p class="infName">Анка Ахалая</p>
-          <p class="infCareer">Модель</p>
+          <p class="infName">Юля Ксесошвили</p>
+          <p class="infCareer">Pop-events в Краснодаре</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -76,8 +76,8 @@
           width="100%"
         />
         <div class="infData">
-          <p class="infName">Дарина Фаизова</p>
-          <p class="infCareer">Модель</p>
+          <p class="infName">Полина Звездина</p>
+          <p class="infCareer">Владелица магазина косметики Perf.ace</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -87,8 +87,8 @@
           width="100%"
         />
         <div class="infData">
-          <p class="infName">Сарина Турецкая</p>
-          <p class="infCareer">Модель</p>
+          <p class="infName">Лера Сергеева</p>
+          <p class="infCareer">Сет-дизайнер Lucky Group</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -98,8 +98,19 @@
           width="100%"
         />
         <div class="infData">
-          <p class="infName">Тамара mp3</p>
-          <p class="infCareer">Певица</p>
+          <p class="infName">Ксения Азарова</p>
+          <p class="infCareer">Главный байер ЦУМ</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          src="~/assets/images/influencers/tamara.png"
+          alt="Anka"
+          width="100%"
+        />
+        <div class="infData">
+          <p class="infName">Ольга Свичинская</p>
+          <p class="infCareer">Владелица коммуникационного агенства AGNC</p>
         </div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -261,6 +272,11 @@ p {
 
   p {
     max-width: 45.313vw;
+  }
+
+  p.text {
+    font-size: 14px;
+    line-height: 150%;
   }
 
   .morePadding {
