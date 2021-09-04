@@ -5,25 +5,25 @@
       <div class="morePadding">
         <div class="mainItem">
           <div class="mainHeading">AGNC —</div>
-          <p class=" mainBlockText first">
+          <p class="mainBlockText first">
             Помогаем нашим клиентам обрести лояльную аудиторию и широкую
             узнаваемость, популяризировать их экологические и благотворительные
             инициативы.
           </p>
         </div>
         <div class="mainItem">
-          <div class="mainHeading ">это</div>
-          <div class="mainHeading ">креативное</div>
+          <div class="mainHeading">это</div>
+          <div class="mainHeading">креативное</div>
         </div>
         <div class="mainItem">
-          <div class="mainHeading ">коммуникационное</div>
+          <div class="mainHeading">коммуникационное</div>
         </div>
         <div class="mainItem">
-          <p class=" mainBlockText second">
+          <p class="mainBlockText second">
             Мы оказываем услуги по разработке креативных концепций для развития
             прогрессивных брендов
           </p>
-          <div class="mainHeading ">агенство</div>
+          <div class="mainHeading">агенство</div>
         </div>
       </div>
     </section>
@@ -223,7 +223,7 @@ export default {
 }
 
 .mainBlock {
-  background-image: url("~/assets/images/BG.png");
+  background-image: url("~/assets/images/BG.svg");
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -403,6 +403,12 @@ section {
   section {
     margin: auto 0;
     padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainBlock {
+    background-image: url("~/assets/images/lil_BG.svg");
   }
 }
 </style>
