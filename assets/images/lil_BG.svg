@@ -1,0 +1,70 @@
+<svg width="320" height="568" viewBox="0 0 320 568" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="320" height="568" fill="#9389D2"/>
+<g filter="url(#filter0_f)">
+<ellipse cx="14.5" cy="209" rx="101.5" ry="102" fill="#9389D2"/>
+</g>
+<g filter="url(#filter1_f)">
+<ellipse cx="92.5" cy="300.5" rx="135.5" ry="99.5" fill="#89D2A5">
+<animate attributeName='cx' values='92.5; 160; 92.5' dur='7s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='300.5; 230; 300.5' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='135.5; 200; 135.5' dur='12s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='99.5; 110; 99.5' dur='5s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+<g filter="url(#filter2_f)">
+<ellipse cx="14.5" cy="500" rx="137.5" ry="143" fill="#89D2CD">
+<animate attributeName='cx' values='14.5; 40; 14.5' dur='8s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='500; 400; 500' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='137.5; 175; 137.5' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='143; 160; 143' dur='8s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+<g filter="url(#filter3_f)">
+<ellipse cx="320" cy="467" rx="160" ry="143" fill="#89BFD2">
+<animate attributeName='cx' values='320; 250; 320' dur='8s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='467; 400; 467' dur='12s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='160; 175; 160' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='143; 140; 143' dur='3s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+<g filter="url(#filter4_f)">
+<ellipse cx="346.5" cy="119.5" rx="175" ry="110" fill="#92FF6B">
+<animate attributeName='cx' values='346.5; 290; 346.5' dur='8s' repeatCount='indefinite'></animate>
+<animate attributeName='cy' values='119.5; 150; 119.5' dur='12s' repeatCount='indefinite'></animate>
+<animate attributeName='rx' values='175; 200; 175' dur='10s' repeatCount='indefinite'></animate>
+<animate attributeName='ry' values='110; 130; 110' dur='6s' repeatCount='indefinite'></animate>
+</ellipse>
+</g>
+</g>
+<defs>
+<filter id="filter0_f" x="-220" y="-26" width="469" height="470" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="66.5" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter1_f" x="0" y="0" width="700" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter2_f" x="0" y="100" width="700" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter3_f" x="0" y="0" width="700" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter4_f" x="0" y="0" width="659" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur"/>
+</filter>
+<clipPath id="clip0">
+<rect width="320" height="568" fill="white"/>
+</clipPath>
+</defs>
+</svg>
