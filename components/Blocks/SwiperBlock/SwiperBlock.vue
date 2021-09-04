@@ -16,8 +16,8 @@
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/anka.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@lidiaivankova-min.jpg"
+          alt="Лида Иванькова"
           width="100%"
         />
         <div class="infData">
@@ -27,8 +27,8 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/darina.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@darinafzv-min.jpg"
+          alt="Дарина Фаизова"
           width="100%"
         />
         <div class="infData">
@@ -38,8 +38,8 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/sari.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@alex_maniovich-min.jpg"
+          alt="Саша Маниович"
           width="100%"
         />
         <div class="infData">
@@ -49,8 +49,8 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/tamara.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@dariaksenz-min.jpg"
+          alt="Даша Ксенз"
           width="100%"
         />
         <div class="infData">
@@ -60,8 +60,8 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/anka.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@joolssss-min.jpg"
+          alt="Юля Ксесошвили"
           width="100%"
         />
         <div class="infData">
@@ -71,8 +71,8 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/darina.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@polina_zvezdina-min.jpg"
+          alt="Полина Звездина"
           width="100%"
         />
         <div class="infData">
@@ -82,8 +82,8 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/sari.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@vasergeeva-min.jpg"
+          alt="Лера Сергеева"
           width="100%"
         />
         <div class="infData">
@@ -93,8 +93,8 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/tamara.png"
-          alt="Anka"
+          src="~/assets/images/influencers/@azarovaka-min.jpg"
+          alt="Ксения Азарова"
           width="100%"
         />
         <div class="infData">
@@ -104,8 +104,9 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="~/assets/images/influencers/tamara.png"
-          alt="Anka"
+          class="lastSlide"
+          src="~/assets/images/influencers/@olgaSvichinskaya-min.jpg"
+          alt="Ольга Свичинская"
           width="100%"
         />
         <div class="infData">
@@ -135,6 +136,7 @@ export default {
   data() {
     return {
       swiperOption: {
+        loop: true,
         slidesPerView: 4.5,
         // centeredSlides: true,
         spaceBetween: 50,
@@ -164,6 +166,10 @@ export default {
 </script>
 
 <style scoped>
+.lastSlide {
+  padding-right: 100px;
+}
+
 .swiperBlock {
   margin-top: 250px;
   background: #9389d2;
