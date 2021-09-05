@@ -70,7 +70,14 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  env: {
+    baseUrl:
+      process.env.NODE_ENV === "dev"
+        ? "http://localhost:3000"
+        : "https://agnc.herokuapp.com/"
+  }
 
   // target: "static"
 };
