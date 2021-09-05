@@ -98,15 +98,15 @@ export default {
     gsap.from(".clientsAgencies", {
       scrollTrigger: {
         trigger: ".clientsAgencies",
-        start: "top 75%"
+        start: "top 75%",
       },
       delay: 0.2,
       duration: 0.6,
       ease: "power2.out",
       y: 50,
-      opacity: 0
+      opacity: 0,
     });
-  }
+  },
 };
 </script>
 
@@ -126,7 +126,7 @@ export default {
 } */
 
 p.text {
-  max-width: 24.125vw;
+  max-width: 386px;
 }
 
 .clientsAgencies {

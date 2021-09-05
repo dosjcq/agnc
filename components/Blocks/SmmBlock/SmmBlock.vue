@@ -39,15 +39,15 @@ export default {
     gsap.from(".smmContent", {
       scrollTrigger: {
         trigger: ".smmContent",
-        start: "top 75%"
+        start: "top 75%",
       },
       delay: 0.2,
       duration: 0.6,
       ease: "power2.out",
       y: 50,
-      opacity: 0
+      opacity: 0,
     });
-  }
+  },
 };
 </script>
 
@@ -93,7 +93,7 @@ li:not(:first-child) {
 }
 
 .text {
-  max-width: 26.063vw;
+  max-width: 417px;
 }
 
 @media (max-width: 1100px) {
