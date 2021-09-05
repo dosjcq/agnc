@@ -44,7 +44,7 @@
 <feGaussianBlur stdDeviation="133" result="effect1_foregroundBlur"/>
 </filter>
 <filter id="filter1_f" x="0" y="0" width="1800" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<!-- <feFlood flood-opacity="0" result="BackgroundImageFix"/> -->
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="133" result="effect1_foregroundBlur"/>
 </filter>
