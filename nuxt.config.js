@@ -74,7 +74,7 @@ export default {
 
   env: {
     baseUrl:
-      process.env.NODE_ENV === "dev"
+      process.env.NODE_ENV === "production"
         ? "http://localhost:3000"
         : "https://agnc.herokuapp.com/"
   }
