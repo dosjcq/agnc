@@ -129,7 +129,7 @@
         </a>
         <div class="infData">
           <p class="infName">Ольга Свичинская</p>
-          <p class="infCareer">Владелица коммуникационного агенства AGNC</p>
+          <p class="infCareer">Владелица агенства AGNC</p>
         </div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -146,10 +146,10 @@ import "swiper/swiper-bundle.css";
 export default {
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   directives: {
-    swiper: directive
+    swiper: directive,
   },
   data() {
     return {
@@ -161,25 +161,25 @@ export default {
         grabCursor: true,
         pagination: {
           el: ".swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         breakpoints: {
           1101: {
-            slidesPerView: 4.5
+            slidesPerView: 4.5,
           },
           801: {
-            slidesPerView: 3.5
+            slidesPerView: 3.5,
           },
           480: {
-            slidesPerView: 2.5
+            slidesPerView: 2.5,
           },
           0: {
-            slidesPerView: 1.5
-          }
-        }
-      }
+            slidesPerView: 1.5,
+          },
+        },
+      },
     };
-  }
+  },
 };
 </script>
 
