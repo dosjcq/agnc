@@ -76,7 +76,21 @@
             </div>
             <div class="clientsLogos">
               <img
+                src="~/assets/images/Logo/Клиенты/izeta.png"
+                alt="maniovich"
+                width="100%"
+              />
+            </div>
+            <div class="clientsLogos">
+              <img
                 src="~/assets/images/Logo/Клиенты/maniovich.png"
+                alt="maniovich"
+                width="100%"
+              />
+            </div>
+            <div class="clientsLogos">
+              <img
+                src="~/assets/images/Logo/Клиенты/vremena-goda.png"
                 alt="maniovich"
                 width="100%"
               />
@@ -138,9 +152,9 @@ p.text {
   justify-items: center;
 }
 
-.clientsLogos:last-child {
+/* .clientsLogos:last-child {
   grid-column: 2 / 3;
-}
+} */
 
 @media (max-width: 1100px) {
   .clientsBlock {

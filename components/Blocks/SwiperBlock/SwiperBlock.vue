@@ -15,100 +15,118 @@
     </div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@lidiaivankova-min.jpg"
-          alt="Лида Иванькова"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/lidiaivankova/">
+          <img
+            src="~/assets/images/influencers/@lidiaivankova-min.jpg"
+            alt="Лида Иванькова"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Лида Иванькова</p>
           <p class="infCareer">Владелица студии красоты My Dear Body</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@darinafzv-min.jpg"
-          alt="Дарина Фаизова"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/darinafzv/">
+          <img
+            src="~/assets/images/influencers/@darinafzv-min.jpg"
+            alt="Дарина Фаизова"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Дарина Фаизова</p>
           <p class="infCareer">Режиссер</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@alex_maniovich-min.jpg"
-          alt="Саша Маниович"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/alex_maniovich/">
+          <img
+            src="~/assets/images/influencers/@alex_maniovich-min.jpg"
+            alt="Саша Маниович"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Саша Маниович</p>
           <p class="infCareer">Дизайнер украшений Maniovich.Am</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@dariaksenz-min.jpg"
-          alt="Даша Ксенз"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/dariaksenz/">
+          <img
+            src="~/assets/images/influencers/@dariaksenz-min.jpg"
+            alt="Даша Ксенз"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Даша Ксенз</p>
           <p class="infCareer">Дизайнер спортивной одежды Almond Crew</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@joolssss-min.jpg"
-          alt="Юля Ксесошвили"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/joolssss/">
+          <img
+            src="~/assets/images/influencers/@joolssss-min.jpg"
+            alt="Юля Ксесошвили"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Юля Ксесошвили</p>
           <p class="infCareer">Pop-events в Краснодаре</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@polina_zvezdina-min.jpg"
-          alt="Полина Звездина"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/polina_zvezdina/">
+          <img
+            src="~/assets/images/influencers/@polina_zvezdina-min.jpg"
+            alt="Полина Звездина"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Полина Звездина</p>
           <p class="infCareer">Владелица магазина косметики Perf.ace</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@vasergeeva-min.jpg"
-          alt="Лера Сергеева"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/vasergeeva/">
+          <img
+            src="~/assets/images/influencers/@vasergeeva-min.jpg"
+            alt="Лера Сергеева"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Лера Сергеева</p>
           <p class="infCareer">Сет-дизайнер Lucky Group</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          src="~/assets/images/influencers/@azarovaka-min.jpg"
-          alt="Ксения Азарова"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/azarovaka/">
+          <img
+            src="~/assets/images/influencers/@azarovaka-min.jpg"
+            alt="Ксения Азарова"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Ксения Азарова</p>
           <p class="infCareer">Главный байер ЦУМ</p>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <img
-          class="lastSlide"
-          src="~/assets/images/influencers/@olgaSvichinskaya-min.jpg"
-          alt="Ольга Свичинская"
-          width="100%"
-        />
+        <a href="https://www.instagram.com/svichinskaya/">
+          <img
+            class="lastSlide"
+            src="~/assets/images/influencers/@olgaSvichinskaya-min.jpg"
+            alt="Ольга Свичинская"
+            width="100%"
+          />
+        </a>
         <div class="infData">
           <p class="infName">Ольга Свичинская</p>
           <p class="infCareer">Владелица коммуникационного агенства AGNC</p>

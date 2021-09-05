@@ -76,7 +76,6 @@
               <button type="submit">ОТПРАВИТЬ БРИФ</button>
             </li>
           </form>
-          {{ value }}
         </div>
       </div>
     </div>
