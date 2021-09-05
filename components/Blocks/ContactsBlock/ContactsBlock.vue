@@ -12,15 +12,11 @@
         <div class="contacts">
           <div class="contact">
             <p>Почта</p>
-            <a href="mail.ru">contact@agnc.ru </a>
+            <a href="info@studioagnc.com">info@studioagnc.com</a>
           </div>
           <div class="contact">
             <p>Instagram</p>
             <a href="https://www.instagram.com/studio_agnc/">@studio_agnc</a>
-          </div>
-          <div class="contact">
-            <p>Телеграм</p>
-            <a href="google.com">t.me/agnc</a>
           </div>
         </div>
 
@@ -89,7 +85,7 @@ import querystring from "querystring";
 export default {
   name: "ContactsBlock",
   components: {
-    Multiselect
+    Multiselect,
   },
   data() {
     return {
@@ -109,8 +105,8 @@ export default {
         { name: "Originals" },
         { name: "Creative Services" },
         { name: "Взаимодейсвие с аудиторией" },
-        { name: "Личный PR" }
-      ]
+        { name: "Личный PR" },
+      ],
     };
   },
   methods: {
@@ -122,12 +118,12 @@ export default {
           this.userName
         }, <h2>Почта заказчика:</h2> <p>${
           this.userMail
-        }</p>, Услуги: <ul> ${this.value.map(el => {
+        }</p>, Услуги: <ul> ${this.value.map((el) => {
           return `<li>${el.name}</li>`;
-        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`,
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -363,7 +359,7 @@ button:focus {
   }
 
   a {
-    font-size: 42px;
+    font-size: 32px;
     line-height: 1;
   }
 

@@ -3,12 +3,8 @@
     <div class="basePadding">
       <div class="footerContainer">
         <div class="infoContent">
-          <p class="blackText">© АО «AGNC», 2017-2021</p>
-          <p class="greyText">Москва, улица Пушкина, 3с2</p>
-        </div>
-        <div class="infoContent morePadding">
-          <p class="blackText">+7 800 555 35 35</p>
-          <p class="greyText">звоните с 10:00 до 20:00</p>
+          <p class="blackText">© АО «AGNC», 2021</p>
+          <p class="greyText">Москва, старопименовский пер д 13 стр 4</p>
         </div>
       </div>
     </div>
@@ -40,7 +36,7 @@
   color: #6c6c6c;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   .footerContainer {
     display: block;
     padding: 30px 0 20px 0;
@@ -51,7 +47,6 @@
   }
 
   .infoContent:last-child {
-    margin-top: 30px;
     width: 100%;
   }
 }
