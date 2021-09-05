@@ -85,6 +85,7 @@
 <script>
 import Multiselect from "vue-multiselect";
 
+import querystring from "querystring";
 export default {
   name: "ContactsBlock",
   components: {
@@ -96,6 +97,7 @@ export default {
       userMail: "",
       userDetails: "",
       value: [],
+      sent: false,
       options: [
         { name: "Consulting & Brand Development" },
         { name: "PR & Marketing" },
@@ -113,7 +115,17 @@ export default {
   },
   methods: {
     submit() {
-      console.log("hello");
+      this.$mail.send("https://agnc.herokuapp.com/mail/send", {
+        from: "nagibin.artyom@mail.ru",
+        subject: "Заказ у агенства AGNC",
+        html: `<h2>Имя заказчика:</h2> ${
+          this.userName
+        }, <h2>Почта заказчика:</h2> <p>${
+          this.userMail
+        }</p>, Услуги: <ul> ${this.value.map(el => {
+          return `<li>${el.name}</li>`;
+        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+      });
     }
   }
 };

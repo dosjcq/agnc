@@ -366,7 +366,7 @@ ul {
 }
 
 li {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
   font-weight: 400;
 }
@@ -420,6 +420,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  li {
+    font-size: 16px;
+  }
+
   .servicesContent {
     display: block;
 
