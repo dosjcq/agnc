@@ -48,10 +48,36 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    "@nuxtjs/axios",
+    [
+      "nuxt-mail",
+      {
+        message: {
+          to: "ctrlaltdelet1999@yandex.ru"
+        },
+        smtp: {
+          host: "smtp.mail.ru",
+          port: 465,
+          secure: true,
+          auth: {
+            user: "nagibin.artyom@mail.ru",
+            pass: "5hlBwMlUYDK3B4MMAZZ5"
+          }
+        }
+      }
+    ]
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  target: "static"
+  // axios: {
+  //   baseUrl:
+  //     process.env.NODE_ENV === "production"
+  //       ? "http://localhost:3000"
+  //       : "https://agnc.herokuapp.com/mail/send"
+  // },
+
+  target: "server"
 };

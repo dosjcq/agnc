@@ -7,17 +7,21 @@
       <ul class="textManrope">
         <li @click="scrollToAbout">Об агенстве</li>
         <li @click="scrollToServices">Услуги</li>
-        <li @click="scrollToInfluencerst">Инфлюенсеры</li>
+        <li @click="scrollToInfluencers">Инфлюенсеры</li>
         <li @click="scrollToClients">Партнеры</li>
+        <li class="ellipseButton" @click="scrollToContacts">Оставить заявку</li>
       </ul>
-      <base-button class="wideDispaly">Оставить заявку</base-button>
-      <base-button class="smallDisplay">Меню</base-button>
+      <li class="ellipseButton smallDisplay" @click="toggleBurger">Меню</li>
+      <!-- <base-button class="wideDispaly">Оставить заявку</base-button>
+      <base-button class="smallDisplay" @activate="toggleBurger"
+        >Меню</base-button
+      > -->
     </div>
   </header>
 </template>
 
 <script>
-import BaseButton from "~/components/BaseComponents/BaseButton";
+// import BaseButton from "~/components/BaseComponents/BaseButton";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin.js";
 
@@ -26,9 +30,17 @@ gsap.registerPlugin(ScrollToPlugin);
 export default {
   name: "TheHeader",
   components: {
-    BaseButton
+    // BaseButton
+  },
+  data() {
+    return {
+      activeBurger: false
+    };
   },
   methods: {
+    toggleBurger() {
+      this.$emit("burger");
+    },
     scrollToAbout() {
       gsap.to(window, {
         duration: 1,
@@ -43,7 +55,7 @@ export default {
         offsetY: -70
       });
     },
-    scrollToInfluencerst() {
+    scrollToInfluencers() {
       gsap.to(window, {
         duration: 1,
         scrollTo: { y: "#influencers", offsetY: 70 },
@@ -54,6 +66,12 @@ export default {
       gsap.to(window, {
         duration: 1,
         scrollTo: { y: "#massMedia", offsetY: 70 }
+      });
+    },
+    scrollToContacts() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#contacts", offsetY: 70 }
       });
     }
   }
@@ -74,7 +92,7 @@ header {
   align-items: center;
 }
 
-ul {
+.textManrope {
   display: flex;
 }
 
@@ -83,7 +101,7 @@ li {
   margin-right: 30px;
   font-weight: 400;
   line-height: 27px;
-  font-size: 18;
+  font-size: 18px;
   cursor: pointer;
 }
 
@@ -106,7 +124,7 @@ li {
     margin: 0 15px;
   }
 
-  ul {
+  .textManrope {
     display: none;
   }
 
@@ -115,7 +133,11 @@ li {
   }
 
   .smallDisplay {
-    display: block;
+    display: inline-block;
+  }
+
+  li.ellipseButton::before {
+    width: 250%;
   }
 }
 

@@ -68,6 +68,42 @@ p.text {
   line-height: 30px;
 }
 
+li.ellipseButton {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: inherit;
+  margin-right: 0;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+li.ellipseButton:hover {
+  color: #9389d2;
+}
+
+li.ellipseButton::before {
+  content: "";
+  border: 1px solid #141414;
+  left: 50%;
+  height: 2.4rem;
+  position: absolute;
+  width: 120%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  top: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+li:focus-visible {
+  outline: none;
+}
+
+li.ellipseButton:hover::before {
+  border-color: #9389d2;
+}
+
 /* БРЕЙКПОИНТЫ */
 /* БРЕЙКПОИНТЫ */
 /* БРЕЙКПОИНТЫ */

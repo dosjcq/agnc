@@ -76,7 +76,21 @@
             </div>
             <div class="clientsLogos">
               <img
+                src="~/assets/images/Logo/Клиенты/izeta.png"
+                alt="maniovich"
+                width="100%"
+              />
+            </div>
+            <div class="clientsLogos">
+              <img
                 src="~/assets/images/Logo/Клиенты/maniovich.png"
+                alt="maniovich"
+                width="100%"
+              />
+            </div>
+            <div class="clientsLogos">
+              <img
+                src="~/assets/images/Logo/Клиенты/vremena-goda.png"
                 alt="maniovich"
                 width="100%"
               />
@@ -100,7 +114,7 @@ export default {
         trigger: ".clientsAgencies",
         start: "top 75%"
       },
-      delay: 0.3,
+      delay: 0.2,
       duration: 0.6,
       ease: "power2.out",
       y: 50,
@@ -138,9 +152,9 @@ p.text {
   justify-items: center;
 }
 
-.clientsLogos:last-child {
+/* .clientsLogos:last-child {
   grid-column: 2 / 3;
-}
+} */
 
 @media (max-width: 1100px) {
   .clientsBlock {
