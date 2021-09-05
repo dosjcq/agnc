@@ -72,7 +72,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  env: {
+  axios: {
     baseUrl:
       process.env.NODE_ENV === "production"
         ? "http://localhost:3000"
