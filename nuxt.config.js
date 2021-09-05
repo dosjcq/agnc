@@ -72,12 +72,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  axios: {
-    baseUrl:
-      process.env.NODE_ENV === "production"
-        ? "http://localhost:3000"
-        : "https://agnc.herokuapp.com/"
-  }
+  // axios: {
+  //   baseUrl:
+  //     process.env.NODE_ENV === "production"
+  //       ? "http://localhost:3000"
+  //       : "https://agnc.herokuapp.com/mail/send"
+  // },
 
-  // target: "static"
+  target: "server"
 };

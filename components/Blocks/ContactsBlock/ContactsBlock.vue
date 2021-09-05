@@ -115,7 +115,7 @@ export default {
   },
   methods: {
     submit() {
-      this.$mail.send({
+      this.$mail.send("https://agnc.herokuapp.com/mail/send", {
         from: "nagibin.artyom@mail.ru",
         subject: "Заказ у агенства AGNC",
         html: `<h2>Имя заказчика:</h2> ${
