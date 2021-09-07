@@ -20,9 +20,7 @@
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="headingAccordion">
-                        Consulting
-                      </p>
+                      <p class="headingAccordion">Consulting</p>
                       <ul>
                         <li>
                           Аудит вашего бренда и консультации по его улучшению
@@ -213,9 +211,7 @@
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="headingAccordion">
-                        Оригинальные проекты AGNC
-                      </p>
+                      <p class="headingAccordion">Оригинальные проекты AGNC</p>
                       <ul>
                         <li>
                           <a href="http://my-cardgame.com/3/"
@@ -304,7 +300,9 @@
             </div>
             <!--end -->
             <!-- <base-button>Оставить заявку</base-button> -->
-            <li class="ellipseButton">Оставить заявку</li>
+            <li class="ellipseButton" @click="scrollToContacts">
+              Оставить заявку
+            </li>
           </div>
         </div>
       </div>
@@ -315,12 +313,24 @@
 <script>
 import Accordion from "~/components/BaseComponents/Accordion/Accordion";
 import AccordionItem from "~/components/BaseComponents/Accordion/AccordionItem";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin.js";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default {
   components: {
     Accordion,
-    AccordionItem
-  }
+    AccordionItem,
+  },
+  methods: {
+    scrollToContacts() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#contacts", offsetY: 70 },
+      });
+    },
+  },
 };
 </script>
 

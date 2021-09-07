@@ -95,14 +95,14 @@ gsap.registerPlugin(ScrollToPlugin);
 export default {
   name: "MainBlock",
   components: {
-    TheHeader
+    TheHeader,
   },
   data() {
     return {
       ready: true,
       activeBurger: false,
       tl: gsap.timeline({ repeat: 0 }),
-      headerBurger: gsap.timeline({ repeat: 0 })
+      headerBurger: gsap.timeline({ repeat: 0 }),
     };
   },
   mounted() {
@@ -112,7 +112,7 @@ export default {
       ease: "power2.out",
       y: 100,
       opacity: 0,
-      stagger: 0.15
+      stagger: 0.15,
     });
     gsap.from(".mainBlockText", {
       delay: 1,
@@ -120,7 +120,7 @@ export default {
       ease: "power2.out",
       y: 50,
       opacity: 0,
-      stagger: 0.15
+      stagger: 0.15,
     });
 
     this.ready = !this.ready;
@@ -134,7 +134,7 @@ export default {
         ease: "power2.out",
 
         opacity: 0,
-        stagger: 0.3
+        stagger: 0.3,
       });
       this.tl.from(".linkMenu", {
         delay: 1.2,
@@ -142,7 +142,7 @@ export default {
         ease: "power2.out",
         y: 200,
         opacity: 0,
-        stagger: 0.3
+        stagger: 0.3,
       });
     },
     closeBurger() {
@@ -153,7 +153,7 @@ export default {
     scrollToAbout() {
       gsap.to(window, {
         duration: 1,
-        scrollTo: { y: "#about", offsetY: 70 }
+        scrollTo: { y: "#about", offsetY: 70 },
       });
       this.activeBurger = !this.activeBurger;
       this.tl.clear();
@@ -162,7 +162,7 @@ export default {
     scrollToServices() {
       gsap.to(window, {
         duration: 1,
-        scrollTo: { y: "#services", offsetY: 70 }
+        scrollTo: { y: "#services", offsetY: 70 },
       });
       this.activeBurger = !this.activeBurger;
       this.tl.clear();
@@ -171,7 +171,7 @@ export default {
     scrollToInfluencers() {
       gsap.to(window, {
         duration: 1,
-        scrollTo: { y: "#influencers", offsetY: 70 }
+        scrollTo: { y: "#influencers", offsetY: 70 },
       });
       this.activeBurger = !this.activeBurger;
       this.tl.clear();
@@ -180,7 +180,7 @@ export default {
     scrollToClients() {
       gsap.to(window, {
         duration: 1,
-        scrollTo: { y: "#massMedia", offsetY: 70 }
+        scrollTo: { y: "#massMedia", offsetY: 70 },
       });
       this.activeBurger = !this.activeBurger;
       this.tl.clear();
@@ -189,13 +189,13 @@ export default {
     scrollToContacts() {
       gsap.to(window, {
         duration: 1,
-        scrollTo: { y: "#contacts", offsetY: 70 }
+        scrollTo: { y: "#contacts", offsetY: 70 },
       });
       this.activeBurger = !this.activeBurger;
       this.tl.clear();
       this.headerBurger.clear();
-    }
-  }
+    },
+  },
   // function() {
   //   gsap.from(".mainHeading", {
   //     scrollTrigger: {
@@ -223,7 +223,7 @@ export default {
 }
 
 .mainBlock {
-  background-image: url("~/assets/images/BG.svg");
+  background-image: url("~/assets/images/BG.png");
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -255,6 +255,7 @@ section {
 
 .mainBlockText {
   font-weight: 400;
+  padding-top: 1.25vw;
   font-size: 1vw;
   line-height: 1;
   box-sizing: border-box;
