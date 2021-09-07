@@ -321,16 +321,16 @@ gsap.registerPlugin(ScrollToPlugin);
 export default {
   components: {
     Accordion,
-    AccordionItem,
+    AccordionItem
   },
   methods: {
     scrollToContacts() {
       gsap.to(window, {
         duration: 1,
-        scrollTo: { y: "#contacts", offsetY: 70 },
+        scrollTo: { y: "#contacts", offsetY: 70 }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -423,6 +423,10 @@ a {
   line-height: 33px;
 }
 
+.fullAccordionContent {
+  width: 50%;
+}
+
 @media (max-width: 1024px) {
   .servicesBlock {
     margin-top: 200px;
@@ -430,6 +434,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  .fullAccordionContent {
+    width: 100%;
+  }
+
   li {
     font-size: 16px;
   }
