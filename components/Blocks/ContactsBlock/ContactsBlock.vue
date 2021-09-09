@@ -31,6 +31,7 @@
                 v-model="userName"
               />
               <input
+                inputmode="email"
                 required
                 type="email"
                 placeholder="Почта"
@@ -81,7 +82,6 @@
 <script>
 import Multiselect from "vue-multiselect";
 
-import querystring from "querystring";
 export default {
   name: "ContactsBlock",
   components: {
@@ -181,7 +181,7 @@ input {
   border: 1px solid #141414;
   border-left: none;
   border-right: none;
-  padding: 14.5px 0;
+  padding: 14px 5px;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -193,13 +193,14 @@ input:focus {
   border-left: none;
   border-right: none;
   border-color: black;
+  outline: none !important;
 }
 
 input:focus-visible {
   border-left: none;
   border-right: none;
   border-color: black;
-  outline: none;
+  outline: none !important;
 }
 
 .userContactsForm input:nth-child(2) {
@@ -235,6 +236,14 @@ textarea {
   color: #828282;
   padding: 10px 0 0 10px;
   margin-bottom: 25px;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+
+textarea:focus-visible {
+  outline: none !important;
 }
 
 textarea::placeholder {

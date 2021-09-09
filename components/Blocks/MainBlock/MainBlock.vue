@@ -77,7 +77,9 @@
           <li>
             <a class="linkMenu" @click="scrollToContacts">Контакты</a>
           </li>
-          <li class="ellipseButton linkMenu">Оставить заявку</li>
+          <li class="ellipseButton linkMenu" @click="scrollToContacts">
+            Оставить заявку
+          </li>
           <!-- <base-button @activate="closeBurger">закрыть</base-button> -->
         </ul>
       </div>

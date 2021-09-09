@@ -57,6 +57,17 @@ h5 {
   line-height: 44.28px; /* 44.28px */
 }
 
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none !important;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 p {
   font-weight: 400;
   margin: 0;
