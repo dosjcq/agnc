@@ -412,7 +412,7 @@ section {
 
 @media (max-width: 640px) {
   .mainBlock {
-    background-image: url("~/assets/images/lil_BG.svg");
+    background-image: url("~/assets/images/lilBG.png");
   }
 }
 </style>
