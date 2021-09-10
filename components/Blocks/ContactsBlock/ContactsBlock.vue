@@ -1,5 +1,11 @@
 <template>
   <div class="contactBlock" id="contacts">
+    <transition name="fade">
+      <div class="transitionForm" v-if="formSubmitted" @click="closePopUp">
+        <h3>Спасибо за заявку!</h3>
+        <button class="popUpClose" @click="closePopUp">Назад</button>
+      </div>
+    </transition>
     <div class="basePadding">
       <div class="contactContent">
         <div class="contactHeading">
@@ -21,59 +27,52 @@
         </div>
 
         <div class="contactForm morePadding">
-          <transition name="fade" mode="out-in">
-            <form @submit.prevent="submit" v-if="!formSubmitted">
-              <div class="userContactsForm">
-                <p class="inputGroup">Ваши контакты</p>
-                <input type="text" placeholder="Имя" v-model="userName" />
-                <input
-                  inputmode="email"
-                  type="email"
-                  placeholder="Почта"
-                  v-model="userMail"
-                />
-              </div>
-              <div class="servicesForm">
-                <p class="inputGroup">Услуги</p>
-                <multiselect
-                  required
-                  v-model="value"
-                  :options="options"
-                  :multiple="true"
-                  :close-on-select="false"
-                  :clear-on-select="false"
-                  :preserve-search="true"
-                  placeholder="Выберите услуги"
-                  label="name"
-                  track-by="name"
-                  :preselect-first="false"
-                >
-                  <template
-                    slot="selection.name"
-                    slot-scope="{ values, isOpen }"
-                    ><span
-                      class="multiselect__single"
-                      v-if="values.length &amp;&amp; !isOpen"
-                      >{{ values.length }} options selected</span
-                    ></template
-                  >
-                </multiselect>
-
-                <textarea
-                  cols="10"
-                  rows="5"
-                  placeholder="Расскажите про вашу задачу"
-                  v-model="userDetails"
-                ></textarea>
-              </div>
-              <li class="ellipseButton">
-                <button type="submit">ОТПРАВИТЬ БРИФ</button>
-              </li>
-            </form>
-            <div class="transitionForm" v-else>
-              <h3>Спасибо за заявку!</h3>
+          <form @submit.prevent="submit">
+            <div class="userContactsForm">
+              <p class="inputGroup">Ваши контакты</p>
+              <input type="text" placeholder="Имя" v-model="userName" />
+              <input
+                inputmode="email"
+                type="email"
+                placeholder="Почта"
+                v-model="userMail"
+              />
             </div>
-          </transition>
+            <div class="servicesForm">
+              <p class="inputGroup">Услуги</p>
+              <multiselect
+                required
+                v-model="value"
+                :options="options"
+                :multiple="true"
+                :close-on-select="false"
+                :clear-on-select="false"
+                :preserve-search="true"
+                placeholder="Выберите услуги"
+                label="name"
+                track-by="name"
+                :preselect-first="false"
+              >
+                <template slot="selection.name" slot-scope="{ values, isOpen }"
+                  ><span
+                    class="multiselect__single"
+                    v-if="values.length &amp;&amp; !isOpen"
+                    >{{ values.length }} options selected</span
+                  ></template
+                >
+              </multiselect>
+
+              <textarea
+                cols="10"
+                rows="5"
+                placeholder="Расскажите про вашу задачу"
+                v-model="userDetails"
+              ></textarea>
+            </div>
+            <li class="ellipseButton">
+              <button type="submit">ОТПРАВИТЬ БРИФ</button>
+            </li>
+          </form>
         </div>
         <!-- <button v-on:click="show = !show">
           Toggle
@@ -120,23 +119,26 @@ export default {
   },
   methods: {
     submit() {
-      // this.$mail.send("http://j56126583.myjino.ru/", {
-      //   from: "nagibin.artyom@mail.ru",
-      //   subject: "Заказ у агенства AGNC",
-      //   html: `<h2>Имя заказчика:</h2> ${
-      //     this.userName
-      //   }, <h2>Почта заказчика:</h2> <p>${
-      //     this.userMail
-      //   }</p>, Услуги: <ul> ${this.value.map(el => {
-      //     return `<li>${el.name}</li>`;
-      //   })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
-      // });
+      this.$mail.send("http://j56126583.myjino.ru/", {
+        from: "nagibin.artyom@mail.ru",
+        subject: "Заказ у агенства AGNC",
+        html: `<h2>Имя заказчика:</h2> ${
+          this.userName
+        }, <h2>Почта заказчика:</h2> <p>${
+          this.userMail
+        }</p>, Услуги: <ul> ${this.value.map(el => {
+          return `<li>${el.name}</li>`;
+        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+      });
 
-      this.formSubmitted = !this.formSubmitted;
+      this.formSubmitted = true;
 
       setTimeout(() => {
-        this.formSubmitted = !this.formSubmitted;
-      }, 5000);
+        this.formSubmitted = false;
+      }, 4000);
+    },
+    closePopUp() {
+      this.formSubmitted = false;
     }
   }
 };
@@ -149,12 +151,19 @@ export default {
   margin-top: 250px;
 }
 
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease-in-out;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
 }
 
 .contactContent {
@@ -200,16 +209,34 @@ p {
 }
 
 .transitionForm {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255, 0.85);
   display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
+  flex-direction: column;
   justify-content: center;
-  grid-row: 1/3;
+  align-items: center;
+  z-index: 10;
+  /* opacity: 0.9; */
 }
 
 .transitionForm h3 {
-  align-self: center;
+  z-index: 11;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+.popUpClose {
+  margin-top: 10px;
+  color: #9389d2;
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
 }
 
 /* .fade-leave {
