@@ -25,14 +25,6 @@ export default {
         href: "https://fonts.googleapis.com/css2?family=Manrope&display=swap"
       }
     ]
-    // script: [
-    //   { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js" },
-    //   {
-    //     src:
-    //       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"
-    //   },
-    //   { src: "/vendor/SplitText.min.js" }
-    // ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -54,15 +46,15 @@ export default {
       "nuxt-mail",
       {
         message: {
-          to: "ctrlaltdelet1999@yandex.ru"
+          to: "studioagnc_redirect@mail.ru"
         },
         smtp: {
           host: "smtp.mail.ru",
           port: 465,
           secure: true,
           auth: {
-            user: "nagibin.artyom@mail.ru",
-            pass: "5hlBwMlUYDK3B4MMAZZ5"
+            user: "studioagnc_redirect@mail.ru",
+            pass: "nTcdz2Di59BCnBHS28oL"
           }
         }
       }
@@ -72,12 +64,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // axios: {
-  //   baseUrl:
-  //     process.env.NODE_ENV === "dev"
-  //       ? "http://localhost:3000"
-  //       : "https://agnc.herokuapp.com/mail/send"
-  // },
-
-  target: "static"
+  target: "server"
 };

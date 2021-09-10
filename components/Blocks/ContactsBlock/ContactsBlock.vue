@@ -119,8 +119,8 @@ export default {
   },
   methods: {
     submit() {
-      this.$mail.send("http://j56126583.myjino.ru/", {
-        from: "nagibin.artyom@mail.ru",
+      this.$mail.send({
+        from: "studioagnc_redirect@mail.ru",
         subject: "Заказ у агенства AGNC",
         html: `<h2>Имя заказчика:</h2> ${
           this.userName
