@@ -79,5 +79,5 @@ export default {
   //       : "https://agnc.herokuapp.com/mail/send"
   // },
 
-  target: "server"
+  target: "static"
 };

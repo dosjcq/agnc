@@ -26,6 +26,24 @@
 
         <div class="contactForm morePadding">
           <form @submit.prevent="submit">
+            <!-- <input type="text" name="name" placeholder="Your Name" />
+            <input type="text" name="email" placeholder="Your Email" />
+            <input type="hidden" name="replyTo" value="info@studioagnc.com" />
+            <textarea name="message"></textarea>
+            <input type="text" name="honeypot" style="display:none" />
+            <input
+              type="hidden"
+              name="redirectTo"
+              value="http://localhost:3000/#contacts"
+            />
+            <input
+              type="hidden"
+              name="accessKey"
+              value="fa962f2d-726d-476e-a12c-52f3fbec3179"
+            />
+            <input type="hidden" name="subject" value="Заголовочек" /> -->
+            <!-- <input type="submit" value="Submit" /> -->
+            <!-- <button type="submit" value="Submit">ОТПРАВИТЬ БРИФ</button> -->
             <div class="userContactsForm">
               <p class="inputGroup">Ваши контакты</p>
               <input
@@ -33,15 +51,17 @@
                 type="text"
                 placeholder="Имя"
                 v-model="userName"
+                name="name"
               />
               <input
                 required
                 type="email"
                 placeholder="Почта"
                 v-model="userMail"
+                name="email"
               />
             </div>
-            <div class="servicesForm">
+            <!-- <div class="servicesForm">
               <p class="inputGroup">Услуги</p>
               <multiselect
                 required
@@ -70,8 +90,9 @@
                 rows="5"
                 placeholder="Расскажите про вашу задачу"
                 v-model="userDetails"
+                name="message"
               ></textarea>
-            </div>
+            </div> -->
             <li class="ellipseButton">
               <button type="submit">ОТПРАВИТЬ БРИФ</button>
             </li>
@@ -114,17 +135,31 @@ export default {
     };
   },
   methods: {
+    // submit() {
+    //   this.$mail.send("https://agnc.herokuapp.com/mail/send", {
+    //     from: "nagibin.artyom@mail.ru",
+    //     subject: "Заказ у агенства AGNC",
+    //     html: `<h2>Имя заказчика:</h2> ${
+    //       this.userName
+    //     }, <h2>Почта заказчика:</h2> <p>${
+    //       this.userMail
+    //     }</p>, Услуги: <ul> ${this.value.map(el => {
+    //       return `<li>${el.name}</li>`;
+    //     })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+    //   });
+    // }
     submit() {
-      this.$mail.send("https://agnc.herokuapp.com/mail/send", {
-        from: "nagibin.artyom@mail.ru",
-        subject: "Заказ у агенства AGNC",
-        html: `<h2>Имя заказчика:</h2> ${
-          this.userName
-        }, <h2>Почта заказчика:</h2> <p>${
-          this.userMail
-        }</p>, Услуги: <ul> ${this.value.map(el => {
-          return `<li>${el.name}</li>`;
-        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+      this.$axios({
+        method: "post",
+        url: "https://form.cat/sda2000den@gmail.com",
+        data: {
+          name: this.userName,
+          email: this.userMail,
+          _gotcha: "",
+          subject: "Заголовок",
+          replyTo: "@"
+          // accessKey: "fa962f2d-726d-476e-a12c-52f3fbec3179"
+        }
       });
     }
   }
