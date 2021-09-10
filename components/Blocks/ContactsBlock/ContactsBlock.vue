@@ -5,8 +5,8 @@
         <div class="contactHeading">
           <h2>БРИФ И КОНТАКТЫ</h2>
           <p class="contactHeadingText">
-            Быстрее всего отвечаем в whatsapp. Но вы также можете рассказать про
-            свою задачу здесь, либо написать нам на почту
+            Быстрее всего отвечаем в Instagram. Но вы также можете рассказать
+            про свою задачу здесь, либо написать нам на почту
           </p>
         </div>
         <div class="contacts">
@@ -21,59 +21,66 @@
         </div>
 
         <div class="contactForm morePadding">
-          <form @submit.prevent="submit">
-            <div class="userContactsForm">
-              <p class="inputGroup">Ваши контакты</p>
-              <input
-                required
-                type="text"
-                placeholder="Имя"
-                v-model="userName"
-              />
-              <input
-                inputmode="email"
-                required
-                type="email"
-                placeholder="Почта"
-                v-model="userMail"
-              />
-            </div>
-            <div class="servicesForm">
-              <p class="inputGroup">Услуги</p>
-              <multiselect
-                required
-                v-model="value"
-                :options="options"
-                :multiple="true"
-                :close-on-select="false"
-                :clear-on-select="false"
-                :preserve-search="true"
-                placeholder="Выберите услуги"
-                label="name"
-                track-by="name"
-                :preselect-first="false"
-              >
-                <template slot="selection.name" slot-scope="{ values, isOpen }"
-                  ><span
-                    class="multiselect__single"
-                    v-if="values.length &amp;&amp; !isOpen"
-                    >{{ values.length }} options selected</span
-                  ></template
+          <transition name="fade" mode="out-in">
+            <form @submit.prevent="submit" v-if="!formSubmitted">
+              <div class="userContactsForm">
+                <p class="inputGroup">Ваши контакты</p>
+                <input type="text" placeholder="Имя" v-model="userName" />
+                <input
+                  inputmode="email"
+                  type="email"
+                  placeholder="Почта"
+                  v-model="userMail"
+                />
+              </div>
+              <div class="servicesForm">
+                <p class="inputGroup">Услуги</p>
+                <multiselect
+                  required
+                  v-model="value"
+                  :options="options"
+                  :multiple="true"
+                  :close-on-select="false"
+                  :clear-on-select="false"
+                  :preserve-search="true"
+                  placeholder="Выберите услуги"
+                  label="name"
+                  track-by="name"
+                  :preselect-first="false"
                 >
-              </multiselect>
+                  <template
+                    slot="selection.name"
+                    slot-scope="{ values, isOpen }"
+                    ><span
+                      class="multiselect__single"
+                      v-if="values.length &amp;&amp; !isOpen"
+                      >{{ values.length }} options selected</span
+                    ></template
+                  >
+                </multiselect>
 
-              <textarea
-                cols="10"
-                rows="5"
-                placeholder="Расскажите про вашу задачу"
-                v-model="userDetails"
-              ></textarea>
+                <textarea
+                  cols="10"
+                  rows="5"
+                  placeholder="Расскажите про вашу задачу"
+                  v-model="userDetails"
+                ></textarea>
+              </div>
+              <li class="ellipseButton">
+                <button type="submit">ОТПРАВИТЬ БРИФ</button>
+              </li>
+            </form>
+            <div class="transitionForm" v-else>
+              <h3>Спасибо за заявку!</h3>
             </div>
-            <li class="ellipseButton">
-              <button type="submit">ОТПРАВИТЬ БРИФ</button>
-            </li>
-          </form>
+          </transition>
         </div>
+        <!-- <button v-on:click="show = !show">
+          Toggle
+        </button>
+        <transition name="fade">
+          <p v-if="show">hello</p>
+        </transition> -->
       </div>
     </div>
   </div>
@@ -94,6 +101,8 @@ export default {
       userDetails: "",
       value: [],
       sent: false,
+      formSubmitted: false,
+      show: true,
       options: [
         { name: "Consulting & Brand Development" },
         { name: "PR & Marketing" },
@@ -111,17 +120,23 @@ export default {
   },
   methods: {
     submit() {
-      this.$mail.send("http://j56126583.myjino.ru/", {
-        from: "nagibin.artyom@mail.ru",
-        subject: "Заказ у агенства AGNC",
-        html: `<h2>Имя заказчика:</h2> ${
-          this.userName
-        }, <h2>Почта заказчика:</h2> <p>${
-          this.userMail
-        }</p>, Услуги: <ul> ${this.value.map(el => {
-          return `<li>${el.name}</li>`;
-        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
-      });
+      // this.$mail.send("http://j56126583.myjino.ru/", {
+      //   from: "nagibin.artyom@mail.ru",
+      //   subject: "Заказ у агенства AGNC",
+      //   html: `<h2>Имя заказчика:</h2> ${
+      //     this.userName
+      //   }, <h2>Почта заказчика:</h2> <p>${
+      //     this.userMail
+      //   }</p>, Услуги: <ul> ${this.value.map(el => {
+      //     return `<li>${el.name}</li>`;
+      //   })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+      // });
+
+      this.formSubmitted = !this.formSubmitted;
+
+      setTimeout(() => {
+        this.formSubmitted = !this.formSubmitted;
+      }, 5000);
     }
   }
 };
@@ -132,6 +147,14 @@ export default {
 <style scoped>
 .contactBlock {
   margin-top: 250px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 .contactContent {
@@ -175,6 +198,35 @@ p {
 .contact {
   margin-top: 47px;
 }
+
+.transitionForm {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  grid-row: 1/3;
+}
+
+.transitionForm h3 {
+  align-self: center;
+}
+
+/* .fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  transition: opacity 0.9 ease-out;
+} */
+
+/* .fade-leave-active {
+  transition: opacity 0.9 ease-in;
+} */
+
+/* .fade-leave-to {
+  opacity: 0;
+} */
 
 input {
   width: 100%;

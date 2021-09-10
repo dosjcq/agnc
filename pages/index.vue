@@ -29,6 +29,7 @@ import ContactsBlock from "~/components/Blocks/ContactsBlock/ContactsBlock";
 import Footer from "~/components/Footer/Footer";
 
 // import "swiper/css";
+// import LocomotiveScroll from "locomotive-scroll";
 
 export default {
   components: {
