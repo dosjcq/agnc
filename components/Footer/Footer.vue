@@ -4,7 +4,7 @@
       <div class="footerContainer">
         <div class="infoContent">
           <p class="blackText">© АО «AGNC», 2021</p>
-          <p class="greyText">Москва, старопименовский пер д 13 стр 4</p>
+          <p class="greyText">Москва, Старопименовский пер д 13 стр 4</p>
         </div>
       </div>
     </div>
