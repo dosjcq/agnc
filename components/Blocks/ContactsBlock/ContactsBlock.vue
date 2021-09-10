@@ -121,21 +121,30 @@ export default {
     submit() {
       this.$mail.send({
         from: "studioagnc_redirect@mail.ru",
-        subject: "Заказ у агенства AGNC",
-        html: `<h2>Имя заказчика:</h2> ${
-          this.userName
-        }, <h2>Почта заказчика:</h2> <p>${
-          this.userMail
-        }</p>, Услуги: <ul> ${this.value.map(el => {
-          return `<li>${el.name}</li>`;
-        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+        subject: "Заказ AGNC",
+        html: `<h2 style='color:#9389d2; margin-bottom: 0.3em'>Имя заказчика:</h2>
+        <p style='margin: 0 0'>${this.userName}</p>
+        <h2 style='color:#9389d2; margin-bottom: 0.3em'>Почта заказчика:</h2>
+        <p style='margin: 0 0'>${this.userMail}</p>
+        <h2 style='color:#9389d2; margin-bottom: 0.3em'>Услуги: </h2>
+        <ul>${String(
+          this.value.map(el => {
+            return `<li>${el.name}</li>` + "\n";
+          })
+        ).replaceAll(",", "")}</ul>
+        <h2 style='color:#9389d2; margin-bottom: 0.3em'>Описание:</h2>
+        <p style='margin: 0 0'>${this.userDetails}</p>`
       });
 
       this.formSubmitted = true;
 
       setTimeout(() => {
         this.formSubmitted = false;
-      }, 4000);
+      }, 1000);
+      this.userName = "";
+      this.userMail = "";
+      this.userDetails = "";
+      this.value = [];
     },
     closePopUp() {
       this.formSubmitted = false;
