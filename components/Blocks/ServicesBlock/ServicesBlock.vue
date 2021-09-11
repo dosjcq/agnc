@@ -260,23 +260,7 @@
                     </div>
                   </template>
                 </accordion-item>
-                <accordion-item>
-                  <!-- This slot will handle the title/header of the accordion and is the part you click on -->
-                  <template slot="accordion-trigger">
-                    <p class="accordion-heading">ВЗАИМОДЕЙСТВИЕ С АУДИТОРИЕЙ</p>
-                  </template>
-                  <!-- This slot will handle all the content that is passed to the accordion -->
-                  <template slot="accordion-content">
-                    <div class="contentAccord">
-                      <p class="headingAccordion"></p>
-                      <ul>
-                        <li>Конкурсы и Giveaways</li>
-                        <li>Кросс-промо</li>
-                        <li>Партнерские интеграции</li>
-                      </ul>
-                    </div>
-                  </template>
-                </accordion-item>
+
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
@@ -366,7 +350,7 @@ p {
 .headingAccordion {
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 ul {
@@ -456,6 +440,10 @@ a {
     font-size: 20px;
     font-weight: normal;
     line-height: 27.32px;
+  }
+
+  .headingAccordion {
+    font-size: 18px;
   }
 }
 </style>

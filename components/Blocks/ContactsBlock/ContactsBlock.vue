@@ -30,12 +30,18 @@
           <form @submit.prevent="submit">
             <div class="userContactsForm">
               <p class="inputGroup">Ваши контакты</p>
-              <input type="text" placeholder="Имя" v-model="userName" />
+              <input
+                type="text"
+                placeholder="Имя"
+                v-model="userName"
+                required
+              />
               <input
                 inputmode="email"
                 type="email"
                 placeholder="Почта"
                 v-model="userMail"
+                required
               />
             </div>
             <div class="servicesForm">
@@ -43,6 +49,9 @@
               <multiselect
                 required
                 v-model="value"
+                :selectLabel="`Нажмите, чтобы выбрать`"
+                :deselectLabel="`Нажмите, чтобы убрать`"
+                :selectedLabel="`Выбрано`"
                 :options="options"
                 :multiple="true"
                 :close-on-select="false"
@@ -119,23 +128,32 @@ export default {
   },
   methods: {
     submit() {
-      this.$mail.send("http://j56126583.myjino.ru/", {
-        from: "nagibin.artyom@mail.ru",
-        subject: "Заказ у агенства AGNC",
-        html: `<h2>Имя заказчика:</h2> ${
-          this.userName
-        }, <h2>Почта заказчика:</h2> <p>${
-          this.userMail
-        }</p>, Услуги: <ul> ${this.value.map(el => {
-          return `<li>${el.name}</li>`;
-        })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
+      this.$mail.send({
+        from: "studioagnc_redirect@mail.ru",
+        subject: "Заказ AGNC",
+        html: `<h2 style='color:#9389d2; margin-bottom: 0.3em'>Имя заказчика:</h2>
+        <p style='margin: 0 0'>${this.userName}</p>
+        <h2 style='color:#9389d2; margin-bottom: 0.3em'>Почта заказчика:</h2>
+        <p style='margin: 0 0'>${this.userMail}</p>
+        <h2 style='color:#9389d2; margin-bottom: 0.3em'>Услуги: </h2>
+        <ul>${String(
+          this.value.map(el => {
+            return `<li>${el.name}</li>` + "\n";
+          })
+        ).replaceAll(",", "")}</ul>
+        <h2 style='color:#9389d2; margin-bottom: 0.3em'>Описание:</h2>
+        <p style='margin: 0 0'>${this.userDetails}</p>`
       });
 
       this.formSubmitted = true;
 
       setTimeout(() => {
         this.formSubmitted = false;
-      }, 4000);
+      }, 1000);
+      this.userName = "";
+      this.userMail = "";
+      this.userDetails = "";
+      this.value = [];
     },
     closePopUp() {
       this.formSubmitted = false;
@@ -143,8 +161,6 @@ export default {
   }
 };
 </script>
-
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
 <style scoped>
 .contactBlock {
@@ -367,6 +383,120 @@ button:focus {
   outline: none;
 }
 
+@media (max-width: 1100px) {
+  .contactBlock {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contactBlock {
+    margin-top: 150px;
+  }
+
+  .contactContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .contactHeading {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  .contactHeadingText {
+    max-width: 98%;
+  }
+
+  a {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .contacts {
+    margin-top: 100px;
+  }
+
+  .contact:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .contactForm {
+    grid-row: 2/3;
+    margin-top: 40px;
+  }
+
+  .contacts {
+    grid-row: 3/4;
+  }
+
+  .inputGroup {
+    font-size: 18x;
+    line-height: 27px;
+    margin-bottom: 10px;
+  }
+
+  .userContactsForm {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .contactHeading {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  .contactHeadingText {
+    max-width: 98%;
+  }
+
+  a {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .contacts {
+    margin-top: 100px;
+  }
+
+  .contact:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .contactForm {
+    grid-row: 2/3;
+    margin-top: 40px;
+  }
+
+  .contacts {
+    grid-row: 3/4;
+  }
+
+  .inputGroup {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 25px;
+  }
+
+  .userContactsForm {
+    margin-bottom: 40px;
+  }
+}
+</style>
+
+<style>
 fieldset[disabled] .multiselect {
   pointer-events: none;
 }
@@ -436,6 +566,11 @@ fieldset[disabled] .multiselect {
 .multiselect:focus {
   outline: none;
 }
+
+.multiselect:focus-visible {
+  outline: none;
+}
+
 .multiselect--disabled {
   background: #ededed;
   pointer-events: none;
@@ -517,10 +652,11 @@ fieldset[disabled] .multiselect {
 .multiselect__tags {
   min-height: 40px;
   display: block;
-  padding: 12.5px 40px 4.5px 0;
+  padding: 12px 40px 4px 5px;
   border-radius: 5px;
   background: #fff;
   font-size: 20px;
+  border: none;
 }
 .multiselect__tag {
   position: relative;
@@ -593,7 +729,7 @@ fieldset[disabled] .multiselect {
   text-align: center;
   transition: transform 0.2s ease;
 }
-/* .multiselect__select:before {
+.multiselect__select:before {
   position: relative;
   right: 0;
   top: 65%;
@@ -602,8 +738,8 @@ fieldset[disabled] .multiselect {
   border-color: #999 transparent transparent;
   border-style: solid;
   border-width: 5px 5px 0;
-  content: '';
-} */
+  content: none;
+}
 .multiselect__placeholder {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -790,118 +926,6 @@ fieldset[disabled] .multiselect {
   }
   to {
     transform: rotate(2turn);
-  }
-}
-
-@media (max-width: 1100px) {
-  .contactBlock {
-    margin-top: 200px;
-  }
-}
-
-@media (max-width: 800px) {
-  .contactBlock {
-    margin-top: 150px;
-  }
-
-  .contactContent {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-  }
-
-  .contactHeading {
-    width: 100%;
-  }
-
-  h2 {
-    margin-bottom: 5px;
-  }
-
-  .contactHeadingText {
-    max-width: 98%;
-  }
-
-  a {
-    font-size: 42px;
-    line-height: 1;
-  }
-
-  .contacts {
-    margin-top: 100px;
-  }
-
-  .contact:not(:first-child) {
-    margin-top: 20px;
-  }
-
-  .contactForm {
-    grid-row: 2/3;
-    margin-top: 40px;
-  }
-
-  .contacts {
-    grid-row: 3/4;
-  }
-
-  .inputGroup {
-    font-size: 18x;
-    line-height: 27px;
-    margin-bottom: 10px;
-  }
-
-  .userContactsForm {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 550px) {
-  .contactContent {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-  }
-
-  .contactHeading {
-    width: 100%;
-  }
-
-  h2 {
-    margin-bottom: 5px;
-  }
-
-  .contactHeadingText {
-    max-width: 98%;
-  }
-
-  a {
-    font-size: 32px;
-    line-height: 1;
-  }
-
-  .contacts {
-    margin-top: 100px;
-  }
-
-  .contact:not(:first-child) {
-    margin-top: 20px;
-  }
-
-  .contactForm {
-    grid-row: 2/3;
-    margin-top: 40px;
-  }
-
-  .contacts {
-    grid-row: 3/4;
-  }
-
-  .inputGroup {
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 25px;
-  }
-
-  .userContactsForm {
-    margin-bottom: 40px;
   }
 }
 </style>
