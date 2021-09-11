@@ -225,7 +225,7 @@ export default {
 }
 
 .mainBlock {
-  background-image: url("~/assets/images/BG.png");
+  background-image: url("~/assets/images/BG.svg");
   height: 100vh;
   background-position: center;
   background-size: cover;
