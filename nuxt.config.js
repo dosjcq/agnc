@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "AGNC - креативное коммуникационное агенство",
+    title: "AGNC - креативное коммуникационное агентство",
     htmlAttrs: {
       lang: "ru"
     },
@@ -17,7 +17,8 @@ export default {
       {
         hid: "keywords",
         name: "keywords",
-        content: "коммуникационное агенство, smm, marketing, pr, branding, agnc"
+        content:
+          "коммуникационное агентство, smm, marketing, pr, branding, agnc"
       },
       {
         hid: "og:title",
