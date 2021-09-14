@@ -5,7 +5,7 @@
         <div class="swiperHeading">
           <h2>ИНФЛЮЕНСЕРЫ</h2>
         </div>
-        <div class="marginFromCenter">
+        <div>
           <p class="text">Наше community лидеров мнений</p>
         </div>
       </div>
@@ -192,8 +192,7 @@ export default {
 }
 
 .swiperContent {
-  display: flex;
-  align-items: flex-start;
+  display: block;
 }
 
 h2,
@@ -285,10 +284,6 @@ p {
 
   .swiper-container {
     padding-right: 15px;
-  }
-
-  .swiperContent {
-    display: block;
   }
 
   p {

@@ -5,10 +5,6 @@
         <div class="clientsContent">
           <div class="clientsHeading">
             <h2>КЛИЕНТЫ</h2>
-            <p class="text">
-              Также AGNC планирует развивать диджитальную pop-up галерею для
-              артистов разных жанров
-            </p>
           </div>
           <div class="clientsAgencies">
             <div class="clientsLogos">
@@ -112,15 +108,15 @@ export default {
     gsap.from(".clientsAgencies", {
       scrollTrigger: {
         trigger: ".clientsAgencies",
-        start: "top 75%",
+        start: "top 75%"
       },
       delay: 0.2,
       duration: 0.6,
       ease: "power2.out",
       y: 50,
-      opacity: 0,
+      opacity: 0
     });
-  },
+  }
 };
 </script>
 
@@ -138,10 +134,6 @@ export default {
 /* .clientsHeading {
   width: 50%;
 } */
-
-p.text {
-  max-width: 386px;
-}
 
 .clientsAgencies {
   display: grid;
@@ -161,10 +153,6 @@ p.text {
     margin-top: 150px;
   }
 
-  p.text {
-    max-width: 31.25vw;
-  }
-
   .clientsAgencies {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -174,10 +162,6 @@ p.text {
 }
 
 @media (max-width: 800px) {
-  p.text {
-    max-width: 38.281vw;
-  }
-
   .clientsAgencies {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -203,11 +187,6 @@ p.text {
   h2 {
     font-size: 36px;
     line-height: 43.6px;
-  }
-
-  p.text {
-    max-width: none;
-    margin-top: 5px;
   }
 }
 </style>

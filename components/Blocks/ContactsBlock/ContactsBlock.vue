@@ -120,8 +120,6 @@ export default {
         { name: "Books" },
         { name: "Online Courses" },
         { name: "Originals" },
-        { name: "Creative Services" },
-        { name: "Взаимодейсвие с аудиторией" },
         { name: "Личный PR" }
       ]
     };
