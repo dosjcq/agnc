@@ -6,10 +6,7 @@
           <h2>ИНФЛЮЕНСЕРЫ</h2>
         </div>
         <div class="marginFromCenter">
-          <p class="text">
-            Сообщество, которое окружает агентство является самым перспективным,
-            молодым и желанным для брендов, которые идут в ногу со временем
-          </p>
+          <p class="text">Наше community лидеров мнений</p>
         </div>
       </div>
     </div>
@@ -146,10 +143,10 @@ import "swiper/swiper-bundle.css";
 export default {
   components: {
     Swiper,
-    SwiperSlide,
+    SwiperSlide
   },
   directives: {
-    swiper: directive,
+    swiper: directive
   },
   data() {
     return {
@@ -161,25 +158,25 @@ export default {
         grabCursor: true,
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
+          clickable: true
         },
         breakpoints: {
           1101: {
-            slidesPerView: 4.5,
+            slidesPerView: 4.5
           },
           801: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.5
           },
           480: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.5
           },
           0: {
-            slidesPerView: 1.5,
-          },
-        },
-      },
+            slidesPerView: 1.5
+          }
+        }
+      }
     };
-  },
+  }
 };
 </script>
 
@@ -276,7 +273,7 @@ p {
 
 @media (max-width: 800px) {
   .swiperBlock {
-    margin-top: 250px;
+    margin-top: 150px;
     background: #9389d2;
     padding: 60px 0;
   }
@@ -318,12 +315,6 @@ p {
 }
 
 @media (max-width: 550px) {
-  .swiperBlock {
-    margin-top: 250px;
-    background: #9389d2;
-    padding: 60px 0;
-  }
-
   .swiperContent {
     display: block;
   }

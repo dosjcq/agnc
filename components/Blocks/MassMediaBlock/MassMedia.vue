@@ -149,6 +149,10 @@ p.text {
 }
 
 @media (max-width: 800px) {
+  .massMediaBlock {
+    margin-top: 150px;
+  }
+
   p.text {
     max-width: 38.281vw;
   }
