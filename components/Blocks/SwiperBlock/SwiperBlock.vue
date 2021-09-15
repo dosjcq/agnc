@@ -86,7 +86,7 @@
         </a>
         <div class="infData">
           <p class="infName">Полина Звездина</p>
-          <p class="infCareer">Владелица магазина косметики Perf.ace</p>
+          <p class="infCareer">Основательница магазина косметики Perf.ace</p>
         </div>
       </swiper-slide>
       <swiper-slide>

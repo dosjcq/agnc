@@ -210,7 +210,7 @@
                           рассчитаны на глубокое погружение друг в друга и в
                           себя.
                         </li>
-                        <li>
+                        <!-- <li>
                           Экологичный просветительский проект
                           <a
                             href="https://www.instagram.com/reverse.russia/?hl=ru"
@@ -220,7 +220,7 @@
                         <li>Студия (coming soon)</li>
                         <li>Курсы AGNC (coming soon)</li>
                         <li>Book (coming soon)</li>
-                        <li>YouTube (coming soon)</li>
+                        <li>YouTube (coming soon)</li> -->
                       </ul>
                     </div>
                   </template>
