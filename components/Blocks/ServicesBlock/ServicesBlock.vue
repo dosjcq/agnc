@@ -23,7 +23,7 @@
                       <p class="headingAccordion">Consulting</p>
                       <ul>
                         <li>
-                          Аудит вашего бренда и консультации по его улучшению
+                          Аудит вашего бренда и консультации по его развитию
                         </li>
                       </ul>
                       <p class="headingAccordion" style="margin-top: 16px">
@@ -64,7 +64,7 @@
                         <li>Определение ключевого маркетингового сообщения</li>
                         <li>Стратегические партнерства</li>
                         <li>
-                          PR-поддержка ключевых локальных СМИ (Print+Digital)
+                          PR-поддержка в ключевых локальных СМИ (Print+Digital)
                         </li>
                         <li>Influencer marketing</li>
                       </ul>
@@ -81,11 +81,11 @@
                   <template slot="accordion-content">
                     <div class="contentAccord">
                       <p class="headingAccordion">
-                        Ведение под ключ фото- видео- съемок
+                        Организация под ключ фото- видео- съемок
                       </p>
                       <ul>
                         <li>Разработка креативных концепций</li>
-                        <li>Производство фото и видео контента</li>
+                        <li>Производство фото- и видеоконтента</li>
                         <li>Разработка графических и motion креативов</li>
                       </ul>
                     </div>
@@ -123,7 +123,8 @@
                     <div class="contentAccord">
                       <p class="headingAccordion">
                         Персональный имидж-консалтинг – разработка фирменного
-                        стиля и реализация х Ester Shenkman
+                        стиля и реализация
+                        <span class="ester">х Ester Shenkman</span>
                       </p>
                       <ul>
                         <li>Консультация</li>
@@ -216,10 +217,10 @@
                             >REVERSE</a
                           >
                         </li>
-                        <li>Студия (cooming soon)</li>
-                        <li>Курсы AGNC (cooming soon)</li>
-                        <li>Book (cooming soon)</li>
-                        <li>YouTube (cooming soon)</li>
+                        <li>Студия (coming soon)</li>
+                        <li>Курсы AGNC (coming soon)</li>
+                        <li>Book (coming soon)</li>
+                        <li>YouTube (coming soon)</li>
                       </ul>
                     </div>
                   </template>
@@ -411,6 +412,18 @@ a {
 
   .headingAccordion {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 440px) {
+  .ester {
+    display: block;
+  }
+}
+
+@media (max-width: 426px) {
+  .ester {
+    display: inline;
   }
 }
 </style>

@@ -47,7 +47,7 @@
         </a>
         <div class="infData">
           <p class="infName">Саша Маниович</p>
-          <p class="infCareer">Дизайнер украшений Maniovich.Am</p>
+          <p class="infCareer">Дизайнер украшений Maniovich.AM</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -72,7 +72,7 @@
           />
         </a>
         <div class="infData">
-          <p class="infName">Юля Ксесошвили</p>
+          <p class="infName">Юля Квесошвили</p>
           <p class="infCareer">Pop-events в Краснодаре</p>
         </div>
       </swiper-slide>
@@ -112,7 +112,7 @@
         </a>
         <div class="infData">
           <p class="infName">Ксения Азарова</p>
-          <p class="infCareer">Главный байер ЦУМ</p>
+          <p class="infCareer">Главный байер ЦУМа</p>
         </div>
       </swiper-slide>
       <swiper-slide>

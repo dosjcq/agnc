@@ -21,9 +21,9 @@
         <div class="mainItem">
           <p class="mainBlockText second">
             Оказываем услуги по разработке креативных концепций для развития
-            прогрессивных брендов
+            прогрессивных брендов.
           </p>
-          <div class="mainHeading">агенство</div>
+          <div class="mainHeading">агентство</div>
         </div>
       </div>
     </section>
