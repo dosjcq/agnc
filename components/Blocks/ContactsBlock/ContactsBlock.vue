@@ -12,7 +12,7 @@
           <h2>БРИФ И КОНТАКТЫ</h2>
           <p class="contactHeadingText">
             Быстрее всего отвечаем в Instagram. Но вы также можете рассказать
-            про свою задачу здесь, либо написать нам на почту
+            про свою задачу здесь или написать нам на почту
           </p>
         </div>
         <div class="contacts">
@@ -120,8 +120,6 @@ export default {
         { name: "Books" },
         { name: "Online Courses" },
         { name: "Originals" },
-        { name: "Creative Services" },
-        { name: "Взаимодейсвие с аудиторией" },
         { name: "Личный PR" }
       ]
     };

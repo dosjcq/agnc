@@ -1,14 +1,40 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "agnc",
+    title: "AGNC - креативное коммуникационное агентство",
     htmlAttrs: {
-      lang: "en"
+      lang: "ru"
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Предоставляем полный спектр маркетинговых и креативных услуг брендам категории fashion, beauty и lifestyle для их развития и продвижения как на любом рынке."
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "коммуникационное агентство, smm, marketing, pr, branding, agnc"
+      },
+      {
+        hid: "og:title",
+        name: "og:title",
+        content: "AGNC - креативное коммуникационное агенство"
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "Предоставляем полный спектр маркетинговых и креативных услуг"
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/ogImg.png"
+      },
       { name: "format-detection", content: "telephone=no" }
     ],
     link: [

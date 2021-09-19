@@ -4,7 +4,7 @@
       <div class="morePadding">
         <div class="servicesContent">
           <div class="headingServices">
-            <h1>УСЛУГИ АГЕНСТВА</h1>
+            <h1>УСЛУГИ АГЕНТСТВА</h1>
           </div>
           <div class="fullAccordionContent">
             <div class="accordion">
@@ -23,7 +23,7 @@
                       <p class="headingAccordion">Consulting</p>
                       <ul>
                         <li>
-                          Аудит вашего бренда и консультации по его улучшению
+                          Аудит вашего бренда и консультации по его развитию
                         </li>
                       </ul>
                       <p class="headingAccordion" style="margin-top: 16px">
@@ -36,7 +36,7 @@
                           его конкурентного преимущества
                         </li>
                         <li>Разработка фирменного стиля и бренд-бука</li>
-                        <li>Разработка бренд-стратегии 360</li>
+                        <li>Разработка бренд-стратегии 360°</li>
                         <li>Бренд-менеджмент</li>
                       </ul>
                     </div>
@@ -62,9 +62,9 @@
                         <li>Медиапланирование</li>
                         <li>Консалтинг</li>
                         <li>Определение ключевого маркетингового сообщения</li>
-                        <li>Стратегичесие партнерства</li>
+                        <li>Стратегические партнерства</li>
                         <li>
-                          Pr-поддержка ключевых локальных СМИ (Print+Digital)
+                          PR-поддержка в ключевых локальных СМИ (Print+Digital)
                         </li>
                         <li>Influencer marketing</li>
                       </ul>
@@ -81,26 +81,16 @@
                   <template slot="accordion-content">
                     <div class="contentAccord">
                       <p class="headingAccordion">
-                        Ведение под ключ фото- видео- съемок
+                        Организация под ключ фото- видео- съемок
                       </p>
                       <ul>
-                        <li>Создание истории вашего бренда</li>
-                        <li>Разработка позиционирования бренда</li>
-                        <li>Разработка коммуникационной стратегии</li>
-                        <li>Определение целей</li>
-                        <li>Медиапланирование</li>
-                        <li>Консалтинг</li>
-                        <li>Определение ключевого маркетингового сообщения</li>
-                        <li>Стратегичесие партнерства</li>
-                        <li>
-                          Pr-поддержка ключевых локальных СМИ (Print+Digital)
-                        </li>
-                        <li>Influencer marketing</li>
+                        <li>Разработка креативных концепций</li>
+                        <li>Производство фото- и видеоконтента</li>
+                        <li>Разработка графических и motion креативов</li>
                       </ul>
                     </div>
                   </template>
                 </accordion-item>
-
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
@@ -117,7 +107,7 @@
                         <li>Guest Management</li>
                         <li>Декор</li>
                         <li>Интеграции в мероприятия партнеров</li>
-                        <li>Pr-поддержка</li>
+                        <li>PR-поддержка</li>
                       </ul>
                     </div>
                   </template>
@@ -126,21 +116,21 @@
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
-                    <p class="accordion-heading">STYLIST</p>
+                    <p class="accordion-heading">STYLING</p>
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
                       <p class="headingAccordion">
-                        Персональный имидж консалтинг - разработка фирменного
-                        стиля и реализация х Ester Shenkman
+                        Персональный имидж-консалтинг – разработка фирменного
+                        стиля и реализация
+                        <span class="ester">х Ester Shenkman</span>
                       </p>
                       <ul>
                         <li>Консультация</li>
                         <li>Разбор гардероба</li>
                         <li>Шопинг</li>
                         <li>Интеграции в мероприятия партнеров</li>
-                        <li>Ревизия гардероба</li>
                         <li>Сопровождение</li>
                       </ul>
                     </div>
@@ -150,19 +140,16 @@
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
-                    <p class="accordion-heading">BRANDING / DESIGN</p>
+                    <p class="accordion-heading">BRANDING & DESIGN</p>
                   </template>
                   <!-- This slot will handle all the content that is passed to the accordion -->
                   <template slot="accordion-content">
                     <div class="contentAccord">
-                      <p class="headingAccordion"></p>
                       <ul>
-                        <li>Консультация</li>
-                        <li>Разбор гардероба</li>
-                        <li>Шопинг</li>
-                        <li>Интеграции в мероприятия партнеров</li>
-                        <li>Ревизия гардероба</li>
-                        <li>Сопровождение</li>
+                        <li>Брендинг</li>
+                        <li>Разработка фирменного стиля</li>
+                        <li>Создание удобных интерфейсов</li>
+                        <li>Дизайн продукта</li>
                       </ul>
                     </div>
                   </template>
@@ -193,11 +180,11 @@
                   <template slot="accordion-content">
                     <div class="contentAccord">
                       <p class="headingAccordion">
-                        Разработка идеи вашего онлайн курса
+                        Разработка идеи вашего онлайн-курса
                       </p>
                       <ul>
-                        <li>Производство обучающего фото и видео-контента</li>
-                        <li>Организации онлайн школы для вашего бизнеса</li>
+                        <li>Производство обучающего фото- и видеоконтента</li>
+                        <li>Организация онлайн-школы для вашего бизнеса</li>
                       </ul>
                     </div>
                   </template>
@@ -220,47 +207,24 @@
                           ближе и завести интересный разговор, а также для
                           развития эмоционального интеллекта. Все вопросы
                           разработаны вместе с профессиональным коучем и
-                          рассчитаны на глубокое погружение друг в друга и себя.
+                          рассчитаны на глубокое погружение друг в друга и в
+                          себя.
                         </li>
-                        <li>
+                        <!-- <li>
                           Экологичный просветительский проект
                           <a
                             href="https://www.instagram.com/reverse.russia/?hl=ru"
                             >REVERSE</a
                           >
                         </li>
-                        <li>Студия (cooming soon)</li>
-                        <li>Курсы AGNC (cooming soon)</li>
-                        <li>Book (cooming soon)</li>
-                        <li>YouTube (cooming soon)</li>
+                        <li>Студия (coming soon)</li>
+                        <li>Курсы AGNC (coming soon)</li>
+                        <li>Book (coming soon)</li>
+                        <li>YouTube (coming soon)</li> -->
                       </ul>
                     </div>
                   </template>
                 </accordion-item>
-                <accordion-item>
-                  <!-- This slot will handle the title/header of the accordion and is the part you click on -->
-                  <template slot="accordion-trigger">
-                    <p class="accordion-heading">CREATIVE SERVICES</p>
-                  </template>
-                  <!-- This slot will handle all the content that is passed to the accordion -->
-                  <template slot="accordion-content">
-                    <div class="contentAccord">
-                      <p class="headingAccordion"></p>
-                      <ul>
-                        <li>
-                          Разработка визуального направления и креативной
-                          стратегии вашего аккаунта
-                        </li>
-                        <li>Art Direction</li>
-                        <li>Продюсирование фото и видео-контента</li>
-                        <li>Разработка графических креативов</li>
-                        <li>Производство иллюстраций и моушен-креативов</li>
-                        <li>Копирайтинг</li>
-                      </ul>
-                    </div>
-                  </template>
-                </accordion-item>
-
                 <accordion-item>
                   <!-- This slot will handle the title/header of the accordion and is the part you click on -->
                   <template slot="accordion-trigger">
@@ -275,7 +239,7 @@
                       <ul>
                         <li>Аудит личного бренда</li>
                         <li>Разработка стратегии</li>
-                        <li>Продвижение по различным каналам коммуникации</li>
+                        <li>Продвижение по различным каналам коммуникаций</li>
                       </ul>
                     </div>
                   </template>
@@ -418,6 +382,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  .servicesBlock {
+    margin-top: 150px;
+  }
+
   .fullAccordionContent {
     width: 100%;
   }
@@ -444,6 +412,18 @@ a {
 
   .headingAccordion {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 440px) {
+  .ester {
+    display: block;
+  }
+}
+
+@media (max-width: 426px) {
+  .ester {
+    display: inline;
   }
 }
 </style>
