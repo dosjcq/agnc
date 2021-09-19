@@ -126,7 +126,7 @@ export default {
   },
   methods: {
     submit() {
-      this.$axios.$post("http://45.134.255.149:3000/mail/send", {
+      this.$axios.$post("http://45.134.255.149/mail/send", {
         from: "studioagnc_redirect@mail.ru",
         subject: "Заказ AGNC",
         html: `<h2 style='color:#9389d2; margin-bottom: 0.3em'>Имя заказчика:</h2>
