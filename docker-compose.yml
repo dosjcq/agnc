@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    container_name: proxy_nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./logs:/var/log/nginx/
+  nuxt:
+    image: sda2000den/agency:0.4
+    container_name: nuxt_app
+    ports:
+      - "3000:3000"
