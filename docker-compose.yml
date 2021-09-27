@@ -9,8 +9,8 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./logs:/var/log/nginx/
-      - /etc/letsencrypt/:/etc/letsencrypt/
-      - ./agnc:/var/www/agnc
+      # - /etc/letsencrypt/:/etc/letsencrypt/
+      # - ./agnc:/var/www/agnc
       # - ./public_html:/public_html
       # - ./conf.d:/etc/nginx/conf.d/
       # - ./dhparam:/etc/nginx/dhparam
