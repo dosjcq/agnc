@@ -9,8 +9,22 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./logs:/var/log/nginx/
+      # - ./public_html:/public_html
+      # - ./conf.d:/etc/nginx/conf.d/
+      - ./dhparam:/etc/nginx/dhparam
+      - ./certbot/conf/:/etc/nginx/ssl/
+      - ./certbot/data:/usr/share/nginx/html/letsencrypt
+
   nuxt:
     image: sda2000den/agency:0.4
     container_name: nuxt_app
     ports:
       - "3000:3000"
+
+  certbot:
+    image: certbot/certbot:latest
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email sda2000den@gmail.com --agree-tos --no-eff-email -d studioagnc.com
+    volumes:
+      - ./certbot/conf/:/etc/letsencrypt
+      - ./certbot/logs/:/var/log/letsencrypt
+      - ./certbot/data:/usr/share/nginx/html/letsencrypt
