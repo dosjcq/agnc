@@ -1,4 +1,4 @@
-version: "3.3"
+version: "2"
 services:
   nuxt:
     image: sda2000den/agency:0.4
@@ -23,6 +23,5 @@ services:
     image: jrcs/letsencrypt-nginx-proxy-companion
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "./vhost.d:/etc/nginx/vhost.d"
-      - "/var/run/docker.sock:/tmp/docker.sock:ro"
-      - "./certs:/etc/nginx/certs"
+    volumes_from:
+      - "nginx-proxy"
