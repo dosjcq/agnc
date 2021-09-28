@@ -1,4 +1,5 @@
 version: "2"
+
 services:
   nuxt:
     image: sda2000den/agency:0.4
@@ -11,17 +12,37 @@ services:
 
   nginx-proxy:
     image: jwilder/nginx-proxy
+    container_name: nginx-proxy
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - "./vhost.d:/etc/nginx/vhost.d"
-      - "/var/run/docker.sock:/tmp/docker.sock:ro"
-      - "./certs:/etc/nginx/certs"
+      - conf:/etc/nginx/conf.d
+      - vhost:/etc/nginx/vhost.d
+      - dhparam:/etc/nginx/dhparam
+      - certs:/etc/nginx/certs:ro
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - proxy
+    restart: always
 
-  letsencrypt-nginx-proxy-companion:
+  letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    container_name: nginx-proxy-le
     volumes_from:
-      - "nginx-proxy"
+      - nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: always
+
+volumes:
+  conf:
+  vhost:
+  dhparam:
+  certs:
+
+networks:
+  proxy:
+    external:
+      name: nginx-proxy
