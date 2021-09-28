@@ -16,3 +16,8 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+  nuxt:
+    image: sda2000den/agency:0.4
+    container_name: nuxt_app
+    ports:
+      - "3000:3000"
