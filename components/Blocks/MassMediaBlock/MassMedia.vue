@@ -5,10 +5,6 @@
         <div class="massMediaContent">
           <div class="massMediaHeading">
             <h2>СМИ</h2>
-            <p class="text">
-              Мы помогаем нашим клиентам не только обретать лояльную аудиторию и
-              широкую узнаваемость
-            </p>
           </div>
           <div class="massMediaAgencies">
             <div class="massMediaLogos">
@@ -118,10 +114,6 @@ export default {
   width: 50%;
 } */
 
-p.text {
-  max-width: 386px;
-}
-
 .massMediaAgencies {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -136,10 +128,6 @@ p.text {
     margin-top: 200px;
   }
 
-  p.text {
-    max-width: 32.813vw;
-  }
-
   .massMediaAgencies {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -149,8 +137,8 @@ p.text {
 }
 
 @media (max-width: 800px) {
-  p.text {
-    max-width: 38.281vw;
+  .massMediaBlock {
+    margin-top: 150px;
   }
 
   .massMediaAgencies {
@@ -182,11 +170,6 @@ p.text {
   h2 {
     font-size: 36px;
     line-height: 43.6px;
-  }
-
-  p.text {
-    max-width: none;
-    margin-top: 5px;
   }
 }
 </style>

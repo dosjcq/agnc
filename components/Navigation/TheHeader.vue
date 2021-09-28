@@ -5,7 +5,7 @@
     </div>
     <div class="navigation">
       <ul class="textManrope">
-        <li @click="scrollToAbout">Об агенстве</li>
+        <li @click="scrollToAbout">Об агентстве</li>
         <li @click="scrollToServices">Услуги</li>
         <li @click="scrollToInfluencers">Инфлюенсеры</li>
         <li @click="scrollToClients">Партнеры</li>

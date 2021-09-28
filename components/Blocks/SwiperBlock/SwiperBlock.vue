@@ -5,11 +5,8 @@
         <div class="swiperHeading">
           <h2>ИНФЛЮЕНСЕРЫ</h2>
         </div>
-        <div class="marginFromCenter">
-          <p class="text">
-            Сообщество, которое окружает агентство является самым перспективным,
-            молодым и желанным для брендов, которые идут в ногу со временем
-          </p>
+        <div>
+          <p class="text">Наше community лидеров мнений</p>
         </div>
       </div>
     </div>
@@ -50,7 +47,7 @@
         </a>
         <div class="infData">
           <p class="infName">Саша Маниович</p>
-          <p class="infCareer">Дизайнер украшений Maniovich.Am</p>
+          <p class="infCareer">Дизайнер украшений Maniovich.AM</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -75,7 +72,7 @@
           />
         </a>
         <div class="infData">
-          <p class="infName">Юля Ксесошвили</p>
+          <p class="infName">Юля Квесошвили</p>
           <p class="infCareer">Pop-events в Краснодаре</p>
         </div>
       </swiper-slide>
@@ -89,7 +86,7 @@
         </a>
         <div class="infData">
           <p class="infName">Полина Звездина</p>
-          <p class="infCareer">Владелица магазина косметики Perf.ace</p>
+          <p class="infCareer">Основательница магазина косметики Perf.ace</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -115,7 +112,7 @@
         </a>
         <div class="infData">
           <p class="infName">Ксения Азарова</p>
-          <p class="infCareer">Главный байер ЦУМ</p>
+          <p class="infCareer">Главный байер ЦУМа</p>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -146,10 +143,10 @@ import "swiper/swiper-bundle.css";
 export default {
   components: {
     Swiper,
-    SwiperSlide,
+    SwiperSlide
   },
   directives: {
-    swiper: directive,
+    swiper: directive
   },
   data() {
     return {
@@ -161,25 +158,25 @@ export default {
         grabCursor: true,
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
+          clickable: true
         },
         breakpoints: {
           1101: {
-            slidesPerView: 4.5,
+            slidesPerView: 4.5
           },
           801: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.5
           },
           480: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.5
           },
           0: {
-            slidesPerView: 1.5,
-          },
-        },
-      },
+            slidesPerView: 1.5
+          }
+        }
+      }
     };
-  },
+  }
 };
 </script>
 
@@ -195,8 +192,7 @@ export default {
 }
 
 .swiperContent {
-  display: flex;
-  align-items: flex-start;
+  display: block;
 }
 
 h2,
@@ -276,7 +272,7 @@ p {
 
 @media (max-width: 800px) {
   .swiperBlock {
-    margin-top: 250px;
+    margin-top: 150px;
     background: #9389d2;
     padding: 60px 0;
   }
@@ -288,10 +284,6 @@ p {
 
   .swiper-container {
     padding-right: 15px;
-  }
-
-  .swiperContent {
-    display: block;
   }
 
   p {
@@ -318,12 +310,6 @@ p {
 }
 
 @media (max-width: 550px) {
-  .swiperBlock {
-    margin-top: 250px;
-    background: #9389d2;
-    padding: 60px 0;
-  }
-
   .swiperContent {
     display: block;
   }

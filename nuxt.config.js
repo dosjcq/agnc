@@ -1,14 +1,40 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "agnc",
+    title: "AGNC - креативное коммуникационное агентство",
     htmlAttrs: {
-      lang: "en"
+      lang: "ru"
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Предоставляем полный спектр маркетинговых и креативных услуг брендам категории fashion, beauty и lifestyle для их развития и продвижения как на любом рынке."
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "коммуникационное агентство, smm, marketing, pr, branding, agnc"
+      },
+      {
+        hid: "og:title",
+        name: "og:title",
+        content: "AGNC - креативное коммуникационное агенство"
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "Предоставляем полный спектр маркетинговых и креативных услуг"
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/ogImg.png"
+      },
       { name: "format-detection", content: "telephone=no" }
     ],
     link: [
@@ -25,18 +51,15 @@ export default {
         href: "https://fonts.googleapis.com/css2?family=Manrope&display=swap"
       }
     ]
-    // script: [
-    //   { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js" },
-    //   {
-    //     src:
-    //       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"
-    //   },
-    //   { src: "/vendor/SplitText.min.js" }
-    // ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/styles/base.css", "reseter.css", "~/assets/styles/main.css"],
+  css: [
+    "~/assets/styles/base.css",
+    "reseter.css",
+    "~/assets/styles/main.css",
+    "vue-multiselect/dist/vue-multiselect.min.css"
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -54,15 +77,15 @@ export default {
       "nuxt-mail",
       {
         message: {
-          to: "ctrlaltdelet1999@yandex.ru"
+          to: "studioagnc_redirect@mail.ru"
         },
         smtp: {
           host: "smtp.mail.ru",
           port: 465,
           secure: true,
           auth: {
-            user: "nagibin.artyom@mail.ru",
-            pass: "5hlBwMlUYDK3B4MMAZZ5"
+            user: "studioagnc_redirect@mail.ru",
+            pass: "nTcdz2Di59BCnBHS28oL"
           }
         }
       }
@@ -72,12 +95,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // axios: {
-  //   baseUrl:
-  //     process.env.NODE_ENV === "dev"
-  //       ? "http://localhost:3000"
-  //       : "https://agnc.herokuapp.com/mail/send"
-  // },
-
-  target: "static"
+  target: "server"
 };
