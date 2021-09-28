@@ -23,5 +23,3 @@ services:
   nuxt:
     image: sda2000den/agency:0.4
     container_name: nuxt_app
-    ports:
-      - "3000:3000"
