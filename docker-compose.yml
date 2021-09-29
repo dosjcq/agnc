@@ -26,5 +26,5 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-      args:
-        BASE_URL: https://studioagnc.com
+      # args:
+      #   BASE_URL: https://studioagnc.com
