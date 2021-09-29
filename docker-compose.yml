@@ -23,5 +23,8 @@ services:
   nuxt:
     image: sda2000den/agency:0.9
     container_name: nuxt_app
-    args:
-      BASE_URL: https://studioagnc.com
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        BASE_URL: https://studioagnc.com
