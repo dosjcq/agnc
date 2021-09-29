@@ -21,5 +21,8 @@ services:
       - ./data/certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
   nuxt:
-    image: sda2000den/agency:0.8
+    image: sda2000den/agency:0.9
     container_name: nuxt_app
+    build:
+      args:
+        BASE_URL: https://studioagnc.com
