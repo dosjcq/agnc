@@ -93,7 +93,7 @@ export default {
   ],
 
   axios: {
-    baseURL: "http://195.140.147.103"
+    baseURL: "https://195.140.147.103"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
