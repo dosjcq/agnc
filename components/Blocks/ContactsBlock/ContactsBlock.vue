@@ -27,7 +27,7 @@
         </div>
 
         <div class="contactForm morePadding">
-          <form @submit.prevent="submit">
+          <form @submit.prevent="submitForm" >
             <!-- <input type="text" name="name" placeholder="Your Name" />
             <input type="text" name="email" placeholder="Your Email" />
             <input type="hidden" name="replyTo" value="info@studioagnc.com" />
@@ -53,12 +53,6 @@
                 placeholder="Имя"
                 v-model="userName"
                 required
-              />
-              <input
-                required
-                type="text"
-                placeholder="Имя"
-                v-model="userName"
                 name="name"
               />
               <input
@@ -69,9 +63,10 @@
                 name="email"
               />
             </div>
-            <!-- <div class="servicesForm">
+            <div class="servicesForm">
               <p class="inputGroup">Услуги</p>
               <multiselect
+                name="value"
                 required
                 v-model="value"
                 :selectLabel="`Нажмите, чтобы выбрать`"
@@ -95,7 +90,12 @@
                   ></template
                 >
               </multiselect>
-
+              <!-- <input
+                name="options"
+                style="display: none"
+                type="text"
+                v-model="optionsStr"
+              /> -->
               <textarea
                 cols="10"
                 rows="5"
@@ -103,7 +103,7 @@
                 v-model="userDetails"
                 name="message"
               ></textarea>
-            </div> -->
+            </div>
             <li class="ellipseButton">
               <button type="submit">ОТПРАВИТЬ БРИФ</button>
             </li>
@@ -114,14 +114,24 @@
         </button>
         <transition name="fade">
           <p v-if="show">hello</p>
-        </transition> -->
-      </div>
+        </transition>
+      </div> -->
     </div>
+    <!-- <form @submit.prevent="submitForm" >
+       <label>
+      <span>Message</span>
+      <textarea name="message" v-model="message"></textarea>
+    </label>
+    <button type="submit">Submit</button>
+    </form> -->
   </div>
 </template>
 
 <script>
 import Multiselect from "vue-multiselect";
+// import emailjs from "emailjs-com";
+const FORMSPARK_ACTION_URL = "https://submit-form.com/ORpxuPbw";
+
 
 export default {
   name: "ContactsBlock",
@@ -130,6 +140,7 @@ export default {
   },
   data() {
     return {
+      message: '',
       userName: "",
       userMail: "",
       userDetails: "",
@@ -150,6 +161,13 @@ export default {
       ]
     };
   },
+  computed: {
+    optionsStr: function() {
+      return this.value.map(val => {
+        return val.name;
+      });
+    }
+  },
   methods: {
     // submit() {
     //   this.$mail.send("https://agnc.herokuapp.com/mail/send", {
@@ -164,29 +182,74 @@ export default {
     //     })} </ul>, <h2>Описание:</h2> <p>${this.userDetails}</p>`
     //   });
     // }
-    submit() {
-      this.$axios({
-        method: "post",
-        url: "https://form.cat/sda2000den@gmail.com",
-        data: {
+    // submit() {
+    //   this.$axios({
+    //     method: "post",
+    //     url: "https://form.cat/sda2000den@gmail.com",
+    //     data: {
+    //       name: this.userName,
+    //       email: this.userMail,
+    //       _gotcha: "",
+    //       subject: "Заголовок",
+    //       replyTo: "@"
+    //       // accessKey: "fa962f2d-726d-476e-a12c-52f3fbec3179"
+    //     }
+    //   });
+
+    //   this.formSubmitted = true;
+
+    //   setTimeout(() => {
+    //     this.formSubmitted = false;
+    //   }, 1000);
+    //   this.userName = "";
+    //   this.userMail = "";
+    //   this.userDetails = "";
+    //   this.value = [];
+    // },
+
+    // sendEmail() {
+    //   emailjs
+    //     .sendForm(
+    //       "service_s1vev3r",
+    //       "template_vy1hczj",
+    //       this.$refs.form,
+    //       "user_PLd3MSuviCS5qdvEedgb4"
+    //     )
+    //     .then(
+    //       result => {
+    //         console.log("SUCCESS!", result.status, result.text);
+    //       },
+    //       error => {
+    //         console.log("FAILED...", error);
+    //       }
+    //     );
+    // },
+
+    // sendEmail() {
+    //   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, 'YOUR_USER_ID')
+    //     .then((result) => {
+    //         console.log('SUCCESS!', result.text);
+    //     }, (error) => {
+    //         console.log('FAILED...', error.text);
+    //     });
+    // },
+
+     async submitForm() {
+      await fetch(FORMSPARK_ACTION_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
           name: this.userName,
+          message: this.userDetails,
           email: this.userMail,
-          _gotcha: "",
-          subject: "Заголовок",
-          replyTo: "@"
-          // accessKey: "fa962f2d-726d-476e-a12c-52f3fbec3179"
-        }
+          value: this.optionsStr,
+        }),
+      }).then(() => {
+        alert("Form submitted");
       });
-
-      this.formSubmitted = true;
-
-      setTimeout(() => {
-        this.formSubmitted = false;
-      }, 1000);
-      this.userName = "";
-      this.userMail = "";
-      this.userDetails = "";
-      this.value = [];
     },
     closePopUp() {
       this.formSubmitted = false;
