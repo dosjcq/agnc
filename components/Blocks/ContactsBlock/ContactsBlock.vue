@@ -66,7 +66,6 @@
             <div class="servicesForm">
               <p class="inputGroup">Услуги</p>
               <multiselect
-                name="value"
                 required
                 v-model="value"
                 :selectLabel="`Нажмите, чтобы выбрать`"
@@ -91,7 +90,7 @@
                 >
               </multiselect>
               <input
-                name="options"
+                name="optionsStr"
                 style="display: none"
                 type="text"
                 v-model="optionsStr"
@@ -242,6 +241,16 @@ export default {
             console.log("FAILED...", error.text);
           }
         );
+      this.formSubmitted = true;
+
+      setTimeout(() => {
+        this.formSubmitted = false;
+      }, 1000);
+      this.userName = "";
+      this.userMail = "";
+      this.userDetails = "";
+      this.value = [];
+      this.optionsStr = [];
     },
 
     // async submitForm() {
