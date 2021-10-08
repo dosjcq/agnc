@@ -27,7 +27,7 @@
         </div>
 
         <div class="contactForm morePadding">
-          <form @submit.prevent="submitForm" >
+          <form ref="form" @submit.prevent="sendEmail">
             <!-- <input type="text" name="name" placeholder="Your Name" />
             <input type="text" name="email" placeholder="Your Email" />
             <input type="hidden" name="replyTo" value="info@studioagnc.com" />
@@ -90,12 +90,12 @@
                   ></template
                 >
               </multiselect>
-              <!-- <input
+              <input
                 name="options"
                 style="display: none"
                 type="text"
                 v-model="optionsStr"
-              /> -->
+              />
               <textarea
                 cols="10"
                 rows="5"
@@ -116,22 +116,23 @@
           <p v-if="show">hello</p>
         </transition>
       </div> -->
-    </div>
-    <!-- <form @submit.prevent="submitForm" >
+      </div>
+      <!-- <form @submit.prevent="submitForm" >
        <label>
       <span>Message</span>
       <textarea name="message" v-model="message"></textarea>
     </label>
     <button type="submit">Submit</button>
     </form> -->
+    </div>
   </div>
 </template>
 
 <script>
 import Multiselect from "vue-multiselect";
 // import emailjs from "emailjs-com";
-const FORMSPARK_ACTION_URL = "https://submit-form.com/ORpxuPbw";
-
+import emailjs from "emailjs-com";
+// const FORMSPARK_ACTION_URL = "https://submit-form.com/ORpxuPbw";
 
 export default {
   name: "ContactsBlock",
@@ -140,7 +141,7 @@ export default {
   },
   data() {
     return {
-      message: '',
+      message: "",
       userName: "",
       userMail: "",
       userDetails: "",
@@ -164,7 +165,7 @@ export default {
   computed: {
     optionsStr: function() {
       return this.value.map(val => {
-        return val.name;
+        return " " + val.name;
       });
     }
   },
@@ -225,32 +226,41 @@ export default {
     //     );
     // },
 
-    // sendEmail() {
-    //   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, 'YOUR_USER_ID')
-    //     .then((result) => {
-    //         console.log('SUCCESS!', result.text);
-    //     }, (error) => {
-    //         console.log('FAILED...', error.text);
-    //     });
-    // },
-
-     async submitForm() {
-      await fetch(FORMSPARK_ACTION_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name: this.userName,
-          message: this.userDetails,
-          email: this.userMail,
-          value: this.optionsStr,
-        }),
-      }).then(() => {
-        alert("Form submitted");
-      });
+    sendEmail() {
+      emailjs
+        .sendForm(
+          "service_drzi1os",
+          "template_vy1hczj",
+          this.$refs.form,
+          "user_PLd3MSuviCS5qdvEedgb4"
+        )
+        .then(
+          result => {
+            console.log("SUCCESS!", result.text);
+          },
+          error => {
+            console.log("FAILED...", error.text);
+          }
+        );
     },
+
+    // async submitForm() {
+    //   await fetch(FORMSPARK_ACTION_URL, {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Accept: "application/json"
+    //     },
+    //     body: JSON.stringify({
+    //       name: this.userName,
+    //       message: this.userDetails,
+    //       email: this.userMail,
+    //       value: this.optionsStr
+    //     })
+    //   }).then(() => {
+    //     alert("Form submitted");
+    //   });
+    // },
     closePopUp() {
       this.formSubmitted = false;
     }
