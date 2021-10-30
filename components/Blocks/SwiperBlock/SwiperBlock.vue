@@ -116,6 +116,19 @@
         </div>
       </swiper-slide>
       <swiper-slide>
+        <a href="https://www.instagram.com/katebutko/">
+          <img
+            src="~/assets/images/influencers/katebutko.jpg"
+            alt="Катя Бутко"
+            width="100%"
+          />
+        </a>
+        <div class="infData">
+          <p class="infName">Катя Бутко</p>
+          <p class="infCareer">Блогер, tech предприниматель</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
         <a href="https://www.instagram.com/svichinskaya/">
           <img
             class="lastSlide"
